@@ -1,0 +1,1962 @@
+[ {
+    "nameEn": "United Arab Emirates",
+    "nameAr": "الإمارات العربية المتحدة",
+    "dialCode": "+971",
+    "isoCode": "AE",
+    "flag": "https://cdn.kcak11.com/CountryFlags/countries/ae.svg",
+    "flagEmoji": "🇦🇪"
+},
+    {
+        "nameEn": "Afghanistan",
+        "nameAr": "أفغانستان",
+        "dialCode": "+93",
+        "isoCode": "AF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/af.svg",
+        "flagEmoji": "🇦🇫"
+    },
+    {
+        "nameEn": "Aland Islands",
+        "nameAr": "جزر آلاند",
+        "dialCode": "+358",
+        "isoCode": "AX",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ax.svg",
+        "flagEmoji": "🇦🇽"
+    },
+    {
+        "nameEn": "Albania",
+        "nameAr": "ألبانيا",
+        "dialCode": "+355",
+        "isoCode": "AL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/al.svg",
+        "flagEmoji": "🇦🇱"
+    },
+    {
+        "nameEn": "Algeria",
+        "nameAr": "الجزائر",
+        "dialCode": "+213",
+        "isoCode": "DZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/dz.svg",
+        "flagEmoji": "🇩🇿"
+    },
+    {
+        "nameEn": "American Samoa",
+        "nameAr": "ساموا الأمريكية",
+        "dialCode": "+1684",
+        "isoCode": "AS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/as.svg",
+        "flagEmoji": "🇦🇸"
+    },
+    {
+        "nameEn": "Andorra",
+        "nameAr": "أندورا",
+        "dialCode": "+376",
+        "isoCode": "AD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ad.svg",
+        "flagEmoji": "🇦🇩"
+    },
+    {
+        "nameEn": "Angola",
+        "nameAr": "أنغولا",
+        "dialCode": "+244",
+        "isoCode": "AO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ao.svg",
+        "flagEmoji": "🇦🇴"
+    },
+    {
+        "nameEn": "Anguilla",
+        "nameAr": "أنغيلا",
+        "dialCode": "+1264",
+        "isoCode": "AI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ai.svg",
+        "flagEmoji": "🇦🇮"
+    },
+    {
+        "nameEn": "Antarctica",
+        "nameAr": "أنتاركتيكا",
+        "dialCode": "+672",
+        "isoCode": "AQ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/aq.svg",
+        "flagEmoji": "🇦🇶"
+    },
+    {
+        "nameEn": "Antigua and Barbuda",
+        "nameAr": "أنتيغوا وبربودا",
+        "dialCode": "+1268",
+        "isoCode": "AG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ag.svg",
+        "flagEmoji": "🇦🇬"
+    },
+    {
+        "nameEn": "Argentina",
+        "nameAr": "الأرجنتين",
+        "dialCode": "+54",
+        "isoCode": "AR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ar.svg",
+        "flagEmoji": "🇦🇷"
+    },
+    {
+        "nameEn": "Armenia",
+        "nameAr": "أرمينيا",
+        "dialCode": "+374",
+        "isoCode": "AM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/am.svg",
+        "flagEmoji": "🇦🇲"
+    },
+    {
+        "nameEn": "Aruba",
+        "nameAr": "أروبا",
+        "dialCode": "+297",
+        "isoCode": "AW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/aw.svg",
+        "flagEmoji": "🇦🇼"
+    },
+    {
+        "nameEn": "Ascension Island",
+        "nameAr": "جزيرة أسنسيون",
+        "dialCode": "+247",
+        "isoCode": "AC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ac.svg",
+        "flagEmoji": "🇦🇨"
+    },
+    {
+        "nameEn": "Australia",
+        "nameAr": "أستراليا",
+        "dialCode": "+61",
+        "isoCode": "AU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/au.svg",
+        "flagEmoji": "🇦🇺"
+    },
+    {
+        "nameEn": "Austria",
+        "nameAr": "النمسا",
+        "dialCode": "+43",
+        "isoCode": "AT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/at.svg",
+        "flagEmoji": "🇦🇹"
+    },
+    {
+        "nameEn": "Azerbaijan",
+        "nameAr": "أذربيجان",
+        "dialCode": "+994",
+        "isoCode": "AZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/az.svg",
+        "flagEmoji": "🇦🇿"
+    },
+    {
+        "nameEn": "Bahamas",
+        "nameAr": "جزر البهاما",
+        "dialCode": "+1242",
+        "isoCode": "BS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bs.svg",
+        "flagEmoji": "🇧🇸"
+    },
+    {
+        "nameEn": "Bahrain",
+        "nameAr": "البحرين",
+        "dialCode": "+973",
+        "isoCode": "BH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bh.svg",
+        "flagEmoji": "🇧🇭"
+    },
+    {
+        "nameEn": "Bangladesh",
+        "nameAr": "بنغلاديش",
+        "dialCode": "+880",
+        "isoCode": "BD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bd.svg",
+        "flagEmoji": "🇧🇩"
+    },
+    {
+        "nameEn": "Barbados",
+        "nameAr": "بربادوس",
+        "dialCode": "+1246",
+        "isoCode": "BB",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bb.svg",
+        "flagEmoji": "🇧🇧"
+    },
+    {
+        "nameEn": "Belarus",
+        "nameAr": "بيلاروسيا",
+        "dialCode": "+375",
+        "isoCode": "BY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/by.svg",
+        "flagEmoji": "🇧🇾"
+    },
+    {
+        "nameEn": "Belgium",
+        "nameAr": "بلجيكا",
+        "dialCode": "+32",
+        "isoCode": "BE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/be.svg",
+        "flagEmoji": "🇧🇪"
+    },
+    {
+        "nameEn": "Belize",
+        "nameAr": "بليز",
+        "dialCode": "+501",
+        "isoCode": "BZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bz.svg",
+        "flagEmoji": "🇧🇿"
+    },
+    {
+        "nameEn": "Benin",
+        "nameAr": "بنين",
+        "dialCode": "+229",
+        "isoCode": "BJ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bj.svg",
+        "flagEmoji": "🇧🇯"
+    },
+    {
+        "nameEn": "Bermuda",
+        "nameAr": "برمودا",
+        "dialCode": "+1441",
+        "isoCode": "BM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bm.svg",
+        "flagEmoji": "🇧🇲"
+    },
+    {
+        "nameEn": "Bhutan",
+        "nameAr": "بوتان",
+        "dialCode": "+975",
+        "isoCode": "BT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bt.svg",
+        "flagEmoji": "🇧🇹"
+    },
+    {
+        "nameEn": "Bolivia",
+        "nameAr": "بوليفيا",
+        "dialCode": "+591",
+        "isoCode": "BO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bo.svg",
+        "flagEmoji": "🇧🇴"
+    },
+    {
+        "nameEn": "Bosnia and Herzegovina",
+        "nameAr": "البوسنة والهرسك",
+        "dialCode": "+387",
+        "isoCode": "BA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ba.svg",
+        "flagEmoji": "🇧🇦"
+    },
+    {
+        "nameEn": "Botswana",
+        "nameAr": "بوتسوانا",
+        "dialCode": "+267",
+        "isoCode": "BW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bw.svg",
+        "flagEmoji": "🇧🇼"
+    },
+    {
+        "nameEn": "Brazil",
+        "nameAr": " البرازيل ",
+        "dialCode": "+55",
+        "isoCode": "BR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/br.svg",
+        "flagEmoji": "🇧🇷"
+    },
+    {
+        "nameEn": "British Indian Ocean Territory",
+        "nameAr": "إقليم المحيط الهندي البريطاني",
+        "dialCode": "+246",
+        "isoCode": "IO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/io.svg",
+        "flagEmoji": "🇮🇴"
+    },
+    {
+        "nameEn": "Brunei Darussalam",
+        "nameAr": "بروناي دار السلام",
+        "dialCode": "+673",
+        "isoCode": "BN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bn.svg",
+        "flagEmoji": "🇧🇳"
+    },
+    {
+        "nameEn": "Bulgaria",
+        "nameAr": "بلغاريا",
+        "dialCode": "+359",
+        "isoCode": "BG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bg.svg",
+        "flagEmoji": "🇧🇬"
+    },
+    {
+        "nameEn": "Burkina Faso",
+        "nameAr": "بوركينا فاسو",
+        "dialCode": "+226",
+        "isoCode": "BF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bf.svg",
+        "flagEmoji": "🇧🇫"
+    },
+    {
+        "nameEn": "Burundi",
+        "nameAr": "بوروندي",
+        "dialCode": "+257",
+        "isoCode": "BI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bi.svg",
+        "flagEmoji": "🇧🇮"
+    },
+    {
+        "nameEn": "Cambodia",
+        "nameAr": "كمبوديا",
+        "dialCode": "+855",
+        "isoCode": "KH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kh.svg",
+        "flagEmoji": "🇰🇭"
+    },
+    {
+        "nameEn": "Cameroon",
+        "nameAr": "الكاميرون",
+        "dialCode": "+237",
+        "isoCode": "CM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cm.svg",
+        "flagEmoji": "🇨🇲"
+    },
+    {
+        "nameEn": "Canada",
+        "nameAr": "كندا",
+        "dialCode": "+1",
+        "isoCode": "CA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ca.svg",
+        "flagEmoji": "🇨🇦"
+    },
+    {
+        "nameEn": "Cape Verde",
+        "nameAr": "الرأس الأخضر",
+        "dialCode": "+238",
+        "isoCode": "CV",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cv.svg",
+        "flagEmoji": "🇨🇻"
+    },
+    {
+        "nameEn": "Cayman Islands",
+        "nameAr": "جزر كايمان",
+        "dialCode": "+1345",
+        "isoCode": "KY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ky.svg",
+        "flagEmoji": "🇰🇾"
+    },
+    {
+        "nameEn": "Central African Republic",
+        "nameAr": "جمهورية أفريقيا الوسطى",
+        "dialCode": "+236",
+        "isoCode": "CF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cf.svg",
+        "flagEmoji": "🇨🇫"
+    },
+    {
+        "nameEn": "Chad",
+        "nameAr": "تشاد",
+        "dialCode": "+235",
+        "isoCode": "TD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/td.svg",
+        "flagEmoji": "🇹🇩"
+    },
+    {
+        "nameEn": "Chile",
+        "nameAr": "تشيلي",
+        "dialCode": "+56",
+        "isoCode": "CL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cl.svg",
+        "flagEmoji": "🇨🇱"
+    },
+    {
+        "nameEn": "China",
+        "nameAr": "الصين",
+        "dialCode": "+86",
+        "isoCode": "CN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cn.svg",
+        "flagEmoji": "🇨🇳"
+    },
+    {
+        "nameEn": "Christmas Island",
+        "nameAr": "جزيرة الكريسماس",
+        "dialCode": "+61",
+        "isoCode": "CX",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cx.svg",
+        "flagEmoji": "🇨🇽"
+    },
+    {
+        "nameEn": "Cocos (Keeling) Islands",
+        "nameAr": "جزر كوكوس (كيلينغ)",
+        "dialCode": "+61",
+        "isoCode": "CC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cc.svg",
+        "flagEmoji": "🇨🇨"
+    },
+    {
+        "nameEn": "Colombia",
+        "nameAr": "كولومبيا",
+        "dialCode": "+57",
+        "isoCode": "CO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/co.svg",
+        "flagEmoji": "🇨🇴"
+    },
+    {
+        "nameEn": "Comoros",
+        "nameAr": "جزر القمر",
+        "dialCode": "+269",
+        "isoCode": "KM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/km.svg",
+        "flagEmoji": "🇰🇲"
+    },
+    {
+        "nameEn": "Congo",
+        "nameAr": "الكونغو",
+        "dialCode": "+242",
+        "isoCode": "CG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cg.svg",
+        "flagEmoji": "🇨🇬"
+    },
+    {
+        "nameEn": "Cook Islands",
+        "nameAr": "جزر كوك",
+        "dialCode": "+682",
+        "isoCode": "CK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ck.svg",
+        "flagEmoji": "🇨🇰"
+    },
+    {
+        "nameEn": "Costa Rica",
+        "nameAr": "كوستاريكا",
+        "dialCode": "+506",
+        "isoCode": "CR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cr.svg",
+        "flagEmoji": "🇨🇷"
+    },
+    {
+        "nameEn": "Croatia",
+        "nameAr": "كرواتيا",
+        "dialCode": "+385",
+        "isoCode": "HR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/hr.svg",
+        "flagEmoji": "🇭🇷"
+    },
+    {
+        "nameEn": "Cuba",
+        "nameAr": "كوبا",
+        "dialCode": "+53",
+        "isoCode": "CU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cu.svg",
+        "flagEmoji": "🇨🇺"
+    },
+    {
+        "nameEn": "Cyprus",
+        "nameAr": "قبرص",
+        "dialCode": "+357",
+        "isoCode": "CY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cy.svg",
+        "flagEmoji": "🇨🇾"
+    },
+    {
+        "nameEn": "Democratic Republic of the Congo",
+        "nameAr": "جمهورية الكونغو الديمقراطية",
+        "dialCode": "+243",
+        "isoCode": "CD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/cd.svg",
+        "flagEmoji": "🇨🇩"
+    },
+    {
+        "nameEn": "Denmark",
+        "nameAr": "الدنمارك",
+        "dialCode": "+45",
+        "isoCode": "DK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/dk.svg",
+        "flagEmoji": "🇩🇰"
+    },
+    {
+        "nameEn": "Djibouti",
+        "nameAr": "جيبوتي",
+        "dialCode": "+253",
+        "isoCode": "DJ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/dj.svg",
+        "flagEmoji": "🇩🇯"
+    },
+    {
+        "nameEn": "Dominica",
+        "nameAr": "دومينيكا",
+        "dialCode": "+1767",
+        "isoCode": "DM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/dm.svg",
+        "flagEmoji": "🇩🇲"
+    },
+    {
+        "nameEn": "Dominican Republic",
+        "nameAr": "جمهورية الدومينيكان",
+        "dialCode": "+1849",
+        "isoCode": "DO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/do.svg",
+        "flagEmoji": "🇩🇴"
+    },
+    {
+        "nameEn": "Ecuador",
+        "nameAr": "الإكوادور",
+        "dialCode": "+593",
+        "isoCode": "EC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ec.svg",
+        "flagEmoji": "🇪🇨"
+    },
+    {
+        "nameEn": "Egypt",
+        "nameAr": "مصر",
+        "dialCode": "+20",
+        "isoCode": "EG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/eg.svg",
+        "flagEmoji": "🇪🇬"
+    },
+    {
+        "nameEn": "El Salvador",
+        "nameAr": "السلفادور",
+        "dialCode": "+503",
+        "isoCode": "SV",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sv.svg",
+        "flagEmoji": "🇸🇻"
+    },
+    {
+        "nameEn": "Equatorial Guinea",
+        "nameAr": "غينيا الاستوائية",
+        "dialCode": "+240",
+        "isoCode": "GQ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gq.svg",
+        "flagEmoji": "🇬🇶"
+    },
+    {
+        "nameEn": "Eritrea",
+        "nameAr": "إريتريا",
+        "dialCode": "+291",
+        "isoCode": "ER",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/er.svg",
+        "flagEmoji": "🇪🇷"
+    },
+    {
+        "nameEn": "Estonia",
+        "nameAr": "إستونيا",
+        "dialCode": "+372",
+        "isoCode": "EE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ee.svg",
+        "flagEmoji": "🇪🇪"
+    },
+    {
+        "nameEn": "Eswatini",
+        "nameAr": "إيسواتيني",
+        "dialCode": "+268",
+        "isoCode": "SZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sz.svg",
+        "flagEmoji": "🇸🇿"
+    },
+    {
+        "nameEn": "Ethiopia",
+        "nameAr": "إثيوبيا",
+        "dialCode": "+251",
+        "isoCode": "ET",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/et.svg",
+        "flagEmoji": "🇪🇹"
+    },
+    {
+        "nameEn": "Falkland Islands (Malvinas)",
+        "nameAr": "جزر فوكلاند (مالفيناس)",
+        "dialCode": "+500",
+        "isoCode": "FK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/fk.svg",
+        "flagEmoji": "🇫🇰"
+    },
+    {
+        "nameEn": "Faroe Islands",
+        "nameAr": "جزر فارو",
+        "dialCode": "+298",
+        "isoCode": "FO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/fo.svg",
+        "flagEmoji": "🇫🇴"
+    },
+    {
+        "nameEn": "Fiji",
+        "nameAr": "فيجي",
+        "dialCode": "+679",
+        "isoCode": "FJ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/fj.svg",
+        "flagEmoji": "🇫🇯"
+    },
+    {
+        "nameEn": "Finland",
+        "nameAr": "فنلندا",
+        "dialCode": "+358",
+        "isoCode": "FI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/fi.svg",
+        "flagEmoji": "🇫🇮"
+    },
+    {
+        "nameEn": "France",
+        "nameAr": "فرنسا",
+        "dialCode": "+33",
+        "isoCode": "FR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/fr.svg",
+        "flagEmoji": "🇫🇷"
+    },
+    {
+        "nameEn": "French Guiana",
+        "nameAr": "غيانا الفرنسية",
+        "dialCode": "+594",
+        "isoCode": "GF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gf.svg",
+        "flagEmoji": "🇬🇫"
+    },
+    {
+        "nameEn": "French Polynesia",
+        "nameAr": "بولينيزيا الفرنسية",
+        "dialCode": "+689",
+        "isoCode": "PF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pf.svg",
+        "flagEmoji": "🇵🇫"
+    },
+    {
+        "nameEn": "Gabon",
+        "nameAr": "الجابون",
+        "dialCode": "+241",
+        "isoCode": "GA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ga.svg",
+        "flagEmoji": "🇬🇦"
+    },
+    {
+        "nameEn": "Gambia",
+        "nameAr": "غامبيا",
+        "dialCode": "+220",
+        "isoCode": "GM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gm.svg",
+        "flagEmoji": "🇬🇲"
+    },
+    {
+        "nameEn": "Georgia",
+        "nameAr": "جورجيا",
+        "dialCode": "+995",
+        "isoCode": "GE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ge.svg",
+        "flagEmoji": "🇬🇪"
+    },
+    {
+        "nameEn": "Germany",
+        "nameAr": "ألمانيا",
+        "dialCode": "+49",
+        "isoCode": "DE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/de.svg",
+        "flagEmoji": "🇩🇪"
+    },
+    {
+        "nameEn": "Ghana",
+        "nameAr": "غانا",
+        "dialCode": "+233",
+        "isoCode": "GH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gh.svg",
+        "flagEmoji": "🇬🇭"
+    },
+    {
+        "nameEn": "Gibraltar",
+        "nameAr": "جبل طارق",
+        "dialCode": "+350",
+        "isoCode": "GI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gi.svg",
+        "flagEmoji": "🇬🇮"
+    },
+    {
+        "nameEn": "Greece",
+        "nameAr": "اليونان",
+        "dialCode": "+30",
+        "isoCode": "GR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gr.svg",
+        "flagEmoji": "🇬🇷"
+    },
+    {
+        "nameEn": "Greenland",
+        "nameAr": "جرينلاند",
+        "dialCode": "+299",
+        "isoCode": "GL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gl.svg",
+        "flagEmoji": "🇬🇱"
+    },
+    {
+        "nameEn": "Grenada",
+        "nameAr": "غرينادا",
+        "dialCode": "+1473",
+        "isoCode": "GD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gd.svg",
+        "flagEmoji": "🇬🇩"
+    },
+    {
+        "nameEn": "Guadeloupe",
+        "nameAr": "جوادلوب",
+        "dialCode": "+590",
+        "isoCode": "GP",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gp.svg",
+        "flagEmoji": "🇬🇵"
+    },
+    {
+        "nameEn": "Guam",
+        "nameAr": "غوام",
+        "dialCode": "+1671",
+        "isoCode": "GU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gu.svg",
+        "flagEmoji": "🇬🇺"
+    },
+    {
+        "nameEn": "Guatemala",
+        "nameAr": "غواتيمالا",
+        "dialCode": "+502",
+        "isoCode": "GT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gt.svg",
+        "flagEmoji": "🇬🇹"
+    },
+    {
+        "nameEn": "Guernsey",
+        "nameAr": "غيرنسي",
+        "dialCode": "+44-1481",
+        "isoCode": "GG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gg.svg",
+        "flagEmoji": "🇬🇬"
+    },
+    {
+        "nameEn": "Guinea",
+        "nameAr": "غينيا",
+        "dialCode": "+224",
+        "isoCode": "GN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gn.svg",
+        "flagEmoji": "🇬🇳"
+    },
+    {
+        "nameEn": "Guinea-Bissau",
+        "nameAr": "غينيا بيساو",
+        "dialCode": "+245",
+        "isoCode": "GW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gw.svg",
+        "flagEmoji": "🇬🇼"
+    },
+    {
+        "nameEn": "Guyana",
+        "nameAr": "غيانا",
+        "dialCode": "+592",
+        "isoCode": "GY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gy.svg",
+        "flagEmoji": "🇬🇾"
+    },
+    {
+        "nameEn": "Haiti",
+        "nameAr": "هايتي",
+        "dialCode": "+509",
+        "isoCode": "HT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ht.svg",
+        "flagEmoji": "🇭🇹"
+    },
+    {
+        "nameEn": "Holy See (Vatican City State)",
+        "nameAr": "الكرسي الرسولي (دولة الفاتيكان)",
+        "dialCode": "+379",
+        "isoCode": "VA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/va.svg",
+        "flagEmoji": "🇻🇦"
+    },
+    {
+        "nameEn": "Honduras",
+        "nameAr": "هندوراس",
+        "dialCode": "+504",
+        "isoCode": "HN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/hn.svg",
+        "flagEmoji": "🇭🇳"
+    },
+    {
+        "nameEn": "Hong Kong",
+        "nameAr": "هونغ كونغ",
+        "dialCode": "+852",
+        "isoCode": "HK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/hk.svg",
+        "flagEmoji": "🇭🇰"
+    },
+    {
+        "nameEn": "Hungary",
+        "nameAr": "المجر",
+        "dialCode": "+36",
+        "isoCode": "HU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/hu.svg",
+        "flagEmoji": "🇭🇺"
+    },
+    {
+        "nameEn": "Iceland",
+        "nameAr": "أيسلندا",
+        "dialCode": "+354",
+        "isoCode": "IS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/is.svg",
+        "flagEmoji": "🇮🇸"
+    },
+    {
+        "nameEn": "India",
+        "nameAr": "الهند",
+        "dialCode": "+91",
+        "isoCode": "IN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/in.svg",
+        "flagEmoji": "🇮🇳"
+    },
+    {
+        "nameEn": "Indonesia",
+        "nameAr": "إندونيسيا",
+        "dialCode": "+62",
+        "isoCode": "ID",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/id.svg",
+        "flagEmoji": "🇮🇩"
+    },
+    {
+        "nameEn": "Iran",
+        "nameAr": "إيران",
+        "dialCode": "+98",
+        "isoCode": "IR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ir.svg",
+        "flagEmoji": "🇮🇷"
+    },
+    {
+        "nameEn": "Iraq",
+        "nameAr": "العراق",
+        "dialCode": "+964",
+        "isoCode": "IQ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/iq.svg",
+        "flagEmoji": "🇮🇶"
+    },
+    {
+        "nameEn": "Ireland",
+        "nameAr": "أيرلندا",
+        "dialCode": "+353",
+        "isoCode": "IE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ie.svg",
+        "flagEmoji": "🇮🇪"
+    },
+    {
+        "nameEn": "Isle of Man",
+        "nameAr": "جزيرة مان",
+        "dialCode": "+44-1624",
+        "isoCode": "IM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/im.svg",
+        "flagEmoji": "🇮🇲"
+    },
+    {
+        "nameEn": "Occupied Palestine",
+        "nameAr": "فلسطين المحتلة",
+        "dialCode": "+972",
+        "isoCode": "PL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ps.svg",
+        "flagEmoji": "🇵🇸"
+    },
+    {
+        "nameEn": "Italy",
+        "nameAr": "إيطاليا",
+        "dialCode": "+39",
+        "isoCode": "IT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/it.svg",
+        "flagEmoji": "🇮🇹"
+    },
+    {
+        "nameEn": "Ivory Coast / Cote d'Ivoire",
+        "nameAr": "ساحل العاج / كوت ديفوار",
+        "dialCode": "+225",
+        "isoCode": "CI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ci.svg",
+        "flagEmoji": "🇨🇮"
+    },
+    {
+        "nameEn": "Jamaica",
+        "nameAr": "جامايكا",
+        "dialCode": "+1876",
+        "isoCode": "JM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/jm.svg",
+        "flagEmoji": "🇯🇲"
+    },
+    {
+        "nameEn": "Japan",
+        "nameAr": "اليابان",
+        "dialCode": "+81",
+        "isoCode": "JP",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/jp.svg",
+        "flagEmoji": "🇯🇵"
+    },
+    {
+        "nameEn": "Jersey",
+        "nameAr": "جيرسي",
+        "dialCode": "+44-1534",
+        "isoCode": "JE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/je.svg",
+        "flagEmoji": "🇯🇪"
+    },
+    {
+        "nameEn": "Jordan",
+        "nameAr": "الأردن",
+        "dialCode": "+962",
+        "isoCode": "JO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/jo.svg",
+        "flagEmoji": "🇯🇴"
+    },
+    {
+        "nameEn": "Kazakhstan",
+        "nameAr": "كازاخستان",
+        "dialCode": "+77",
+        "isoCode": "KZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kz.svg",
+        "flagEmoji": "🇰🇿"
+    },
+    {
+        "nameEn": "Kenya",
+        "nameAr": "كينيا",
+        "dialCode": "+254",
+        "isoCode": "KE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ke.svg",
+        "flagEmoji": "🇰🇪"
+    },
+    {
+        "nameEn": "Kiribati",
+        "nameAr": "كيريباتي",
+        "dialCode": "+686",
+        "isoCode": "KI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ki.svg",
+        "flagEmoji": "🇰🇮"
+    },
+    {
+        "nameEn": "Korea, Democratic People's Republic of Korea",
+        "nameAr": "جمهورية كوريا الشعبية الديمقراطية",
+        "dialCode": "+850",
+        "isoCode": "KP",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kp.svg",
+        "flagEmoji": "🇰🇵"
+    },
+    {
+        "nameEn": "Korea, Republic of South Korea",
+        "nameAr": "جمهورية كوريا الجنوبية",
+        "dialCode": "+82",
+        "isoCode": "KR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kr.svg",
+        "flagEmoji": "🇰🇷"
+    },
+    {
+        "nameEn": "Kosovo",
+        "nameAr": "كوسوفو",
+        "dialCode": "+383",
+        "isoCode": "XK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/xk.svg",
+        "flagEmoji": "🇽🇰"
+    },
+    {
+        "nameEn": "Kuwait",
+        "nameAr": "الكويت",
+        "dialCode": "+965",
+        "isoCode": "KW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kw.svg",
+        "flagEmoji": "🇰🇼"
+    },
+    {
+        "nameEn": "Kyrgyzstan",
+        "nameAr": "قيرغيزستان",
+        "dialCode": "+996",
+        "isoCode": "KG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kg.svg",
+        "flagEmoji": "🇰🇬"
+    },
+    {
+        "nameEn": "Laos",
+        "nameAr": "لاوس",
+        "dialCode": "+856",
+        "isoCode": "LA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/la.svg",
+        "flagEmoji": "🇱🇦"
+    },
+    {
+        "nameEn": "Latvia",
+        "nameAr": "لاتفيا",
+        "dialCode": "+371",
+        "isoCode": "LV",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lv.svg",
+        "flagEmoji": "🇱🇻"
+    },
+    {
+        "nameEn": "Lebanon",
+        "nameAr": "لبنان",
+        "dialCode": "+961",
+        "isoCode": "LB",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lb.svg",
+        "flagEmoji": "🇱🇧"
+    },
+    {
+        "nameEn": "Lesotho",
+        "nameAr": "ليسوتو",
+        "dialCode": "+266",
+        "isoCode": "LS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ls.svg",
+        "flagEmoji": "🇱🇸"
+    },
+    {
+        "nameEn": "Liberia",
+        "nameAr": "ليبيريا",
+        "dialCode": "+231",
+        "isoCode": "LR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lr.svg",
+        "flagEmoji": "🇱🇷"
+    },
+    {
+        "nameEn": "Libya",
+        "nameAr": "ليبيا",
+        "dialCode": "+218",
+        "isoCode": "LY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ly.svg",
+        "flagEmoji": "🇱🇾"
+    },
+    {
+        "nameEn": "Liechtenstein",
+        "nameAr": "ليختنشتاين",
+        "dialCode": "+423",
+        "isoCode": "LI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/li.svg",
+        "flagEmoji": "🇱🇮"
+    },
+    {
+        "nameEn": "Lithuania",
+        "nameAr": "ليتوانيا",
+        "dialCode": "+370",
+        "isoCode": "LT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lt.svg",
+        "flagEmoji": "🇱🇹"
+    },
+    {
+        "nameEn": "Luxembourg",
+        "nameAr": "لوكسمبورغ",
+        "dialCode": "+352",
+        "isoCode": "LU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lu.svg",
+        "flagEmoji": "🇱🇺"
+    },
+    {
+        "nameEn": "Macau",
+        "nameAr": "ماكاو",
+        "dialCode": "+853",
+        "isoCode": "MO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mo.svg",
+        "flagEmoji": "🇲🇴"
+    },
+    {
+        "nameEn": "Madagascar",
+        "nameAr": "مدغشقر",
+        "dialCode": "+261",
+        "isoCode": "MG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mg.svg",
+        "flagEmoji": "🇲🇬"
+    },
+    {
+        "nameEn": "Malawi",
+        "nameAr": "ملاوي",
+        "dialCode": "+265",
+        "isoCode": "MW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mw.svg",
+        "flagEmoji": "🇲🇼"
+    },
+    {
+        "nameEn": "Malaysia",
+        "nameAr": "ماليزيا",
+        "dialCode": "+60",
+        "isoCode": "MY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/my.svg",
+        "flagEmoji": "🇲🇾"
+    },
+    {
+        "nameEn": "Maldives",
+        "nameAr": "جزر المالديف",
+        "dialCode": "+960",
+        "isoCode": "MV",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mv.svg",
+        "flagEmoji": "🇲🇻"
+    },
+    {
+        "nameEn": "Mali",
+        "nameAr": "مالي",
+        "dialCode": "+223",
+        "isoCode": "ML",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ml.svg",
+        "flagEmoji": "🇲🇱"
+    },
+    {
+        "nameEn": "Malta",
+        "nameAr": "مالطا",
+        "dialCode": "+356",
+        "isoCode": "MT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mt.svg",
+        "flagEmoji": "🇲🇹"
+    },
+    {
+        "nameEn": "Marshall Islands",
+        "nameAr": "جزر مارشال",
+        "dialCode": "+692",
+        "isoCode": "MH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mh.svg",
+        "flagEmoji": "🇲🇭"
+    },
+    {
+        "nameEn": "Martinique",
+        "nameAr": "مارتينيك",
+        "dialCode": "+596",
+        "isoCode": "MQ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mq.svg",
+        "flagEmoji": "🇲🇶"
+    },
+    {
+        "nameEn": "Mauritania",
+        "nameAr": "موريتانيا",
+        "dialCode": "+222",
+        "isoCode": "MR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mr.svg",
+        "flagEmoji": "🇲🇷"
+    },
+    {
+        "nameEn": "Mauritius",
+        "nameAr": "موريشيوس",
+        "dialCode": "+230",
+        "isoCode": "MU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mu.svg",
+        "flagEmoji": "🇲🇺"
+    },
+    {
+        "nameEn": "Mayotte",
+        "nameAr": "مايوت",
+        "dialCode": "+262",
+        "isoCode": "YT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/yt.svg",
+        "flagEmoji": "🇾🇹"
+    },
+    {
+        "nameEn": "Mexico",
+        "nameAr": "المكسيك",
+        "dialCode": "+52",
+        "isoCode": "MX",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mx.svg",
+        "flagEmoji": "🇲🇽"
+    },
+    {
+        "nameEn": "Micronesia, Federated States of Micronesia",
+        "nameAr": "ولايات ميكرونيزيا الموحدة",
+        "dialCode": "+691",
+        "isoCode": "FM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/fm.svg",
+        "flagEmoji": "🇫🇲"
+    },
+    {
+        "nameEn": "Moldova",
+        "nameAr": "مولدوفا",
+        "dialCode": "+373",
+        "isoCode": "MD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/md.svg",
+        "flagEmoji": "🇲🇩"
+    },
+    {
+        "nameEn": "Monaco",
+        "nameAr": "موناكو",
+        "dialCode": "+377",
+        "isoCode": "MC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mc.svg",
+        "flagEmoji": "🇲🇨"
+    },
+    {
+        "nameEn": "Mongolia",
+        "nameAr": "منغوليا",
+        "dialCode": "+976",
+        "isoCode": "MN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mn.svg",
+        "flagEmoji": "🇲🇳"
+    },
+    {
+        "nameEn": "Montenegro",
+        "nameAr": "الجبل الأسود",
+        "dialCode": "+382",
+        "isoCode": "ME",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/me.svg",
+        "flagEmoji": "🇲🇪"
+    },
+    {
+        "nameEn": "Montserrat",
+        "nameAr": "مونتسيرات",
+        "dialCode": "+1664",
+        "isoCode": "MS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ms.svg",
+        "flagEmoji": "🇲🇸"
+    },
+    {
+        "nameEn": "Morocco",
+        "nameAr": "المغرب",
+        "dialCode": "+212",
+        "isoCode": "MA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ma.svg",
+        "flagEmoji": "🇲🇦"
+    },
+    {
+        "nameEn": "Mozambique",
+        "nameAr": "موزمبيق",
+        "dialCode": "+258",
+        "isoCode": "MZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mz.svg",
+        "flagEmoji": "🇲🇿"
+    },
+    {
+        "nameEn": "Myanmar",
+        "nameAr": "ميانمار",
+        "dialCode": "+95",
+        "isoCode": "MM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mm.svg",
+        "flagEmoji": "🇲🇲"
+    },
+    {
+        "nameEn": "Namibia",
+        "nameAr": "ناميبيا",
+        "dialCode": "+264",
+        "isoCode": "NA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/na.svg",
+        "flagEmoji": "🇳🇦"
+    },
+    {
+        "nameEn": "Nauru",
+        "nameAr": "ناورو",
+        "dialCode": "+674",
+        "isoCode": "NR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/nr.svg",
+        "flagEmoji": "🇳🇷"
+    },
+    {
+        "nameEn": "Nepal",
+        "nameAr": "نيبال",
+        "dialCode": "+977",
+        "isoCode": "NP",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/np.svg",
+        "flagEmoji": "🇳🇵"
+    },
+    {
+        "nameEn": "Netherlands",
+        "nameAr": "هولندا",
+        "dialCode": "+31",
+        "isoCode": "NL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/nl.svg",
+        "flagEmoji": "🇳🇱"
+    },
+    {
+        "nameEn": "Netherlands Antilles",
+        "nameAr": "جزر الأنتيل الهولندية",
+        "dialCode": "+599",
+        "isoCode": "AN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/an.svg",
+        "flagEmoji": "🇦🇳"
+    },
+    {
+        "nameEn": "New Caledonia",
+        "nameAr": "كاليدونيا الجديدة",
+        "dialCode": "+687",
+        "isoCode": "NC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/nc.svg",
+        "flagEmoji": "🇳🇨"
+    },
+    {
+        "nameEn": "New Zealand",
+        "nameAr": "نيوزيلندا",
+        "dialCode": "+64",
+        "isoCode": "NZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/nz.svg",
+        "flagEmoji": "🇳🇿"
+    },
+    {
+        "nameEn": "Nicaragua",
+        "nameAr": "نيكاراغوا",
+        "dialCode": "+505",
+        "isoCode": "NI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ni.svg",
+        "flagEmoji": "🇳🇮"
+    },
+    {
+        "nameEn": "Niger",
+        "nameAr": "النيجر",
+        "dialCode": "+227",
+        "isoCode": "NE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ne.svg",
+        "flagEmoji": "🇳🇪"
+    },
+    {
+        "nameEn": "Nigeria",
+        "nameAr": "نيجيريا",
+        "dialCode": "+234",
+        "isoCode": "NG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ng.svg",
+        "flagEmoji": "🇳🇬"
+    },
+    {
+        "nameEn": "Niue",
+        "nameAr": "نيوي",
+        "dialCode": "+683",
+        "isoCode": "NU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/nu.svg",
+        "flagEmoji": "🇳🇺"
+    },
+    {
+        "nameEn": "Norfolk Island",
+        "nameAr": "جزيرة نورفولك",
+        "dialCode": "+672",
+        "isoCode": "NF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/nf.svg",
+        "flagEmoji": "🇳🇫"
+    },
+    {
+        "nameEn": "North Macedonia",
+        "nameAr": "مقدونيا الشمالية",
+        "dialCode": "+389",
+        "isoCode": "MK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mk.svg",
+        "flagEmoji": "🇲🇰"
+    },
+    {
+        "nameEn": "Northern Mariana Islands",
+        "nameAr": "جزر ماريانا الشمالية",
+        "dialCode": "+1670",
+        "isoCode": "MP",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mp.svg",
+        "flagEmoji": "🇲🇵"
+    },
+    {
+        "nameEn": "Norway",
+        "nameAr": "النرويج",
+        "dialCode": "+47",
+        "isoCode": "NO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/no.svg",
+        "flagEmoji": "🇳🇴"
+    },
+    {
+        "nameEn": "Oman",
+        "nameAr": "عمان",
+        "dialCode": "+968",
+        "isoCode": "OM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/om.svg",
+        "flagEmoji": "🇴🇲"
+    },
+    {
+        "nameEn": "Pakistan",
+        "nameAr": "باكستان",
+        "dialCode": "+92",
+        "isoCode": "PK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pk.svg",
+        "flagEmoji": "🇵🇰"
+    },
+    {
+        "nameEn": "Palau",
+        "nameAr": "بالاو",
+        "dialCode": "+680",
+        "isoCode": "PW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pw.svg",
+        "flagEmoji": "🇵🇼"
+    },
+    {
+        "nameEn": "Palestine",
+        "nameAr": "فلسطين",
+        "dialCode": "+970",
+        "isoCode": "PS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ps.svg",
+        "flagEmoji": "🇵🇸"
+    },
+    {
+        "nameEn": "Panama",
+        "nameAr": "بنما",
+        "dialCode": "+507",
+        "isoCode": "PA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pa.svg",
+        "flagEmoji": "🇵🇦"
+    },
+    {
+        "nameEn": "Papua New Guinea",
+        "nameAr": "بابوا غينيا الجديدة",
+        "dialCode": "+675",
+        "isoCode": "PG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pg.svg",
+        "flagEmoji": "🇵🇬"
+    },
+    {
+        "nameEn": "Paraguay",
+        "nameAr": "باراغواي",
+        "dialCode": "+595",
+        "isoCode": "PY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/py.svg",
+        "flagEmoji": "🇵🇾"
+    },
+    {
+        "nameEn": "Peru",
+        "nameAr": "بيرو",
+        "dialCode": "+51",
+        "isoCode": "PE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pe.svg",
+        "flagEmoji": "🇵🇪"
+    },
+    {
+        "nameEn": "Philippines",
+        "nameAr": "الفلبين",
+        "dialCode": "+63",
+        "isoCode": "PH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ph.svg",
+        "flagEmoji": "🇵🇭"
+    },
+    {
+        "nameEn": "Pitcairn",
+        "nameAr": "بيتكيرن",
+        "dialCode": "+872",
+        "isoCode": "PN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pn.svg",
+        "flagEmoji": "🇵🇳"
+    },
+    {
+        "nameEn": "Poland",
+        "nameAr": "بولندا",
+        "dialCode": "+48",
+        "isoCode": "PL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pl.svg",
+        "flagEmoji": "🇵🇱"
+    },
+    {
+        "nameEn": "Portugal",
+        "nameAr": "البرتغال",
+        "dialCode": "+351",
+        "isoCode": "PT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pt.svg",
+        "flagEmoji": "🇵🇹"
+    },
+    {
+        "nameEn": "Puerto Rico",
+        "nameAr": "بورتوريكو",
+        "dialCode": "+1939",
+        "isoCode": "PR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pr.svg",
+        "flagEmoji": "🇵🇷"
+    },
+    {
+        "nameEn": "Qatar",
+        "nameAr": "قطر",
+        "dialCode": "+974",
+        "isoCode": "QA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/qa.svg",
+        "flagEmoji": "🇶🇦"
+    },
+    {
+        "nameEn": "Reunion",
+        "nameAr": "ريونيون",
+        "dialCode": "+262",
+        "isoCode": "RE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/re.svg",
+        "flagEmoji": "🇷🇪"
+    },
+    {
+        "nameEn": "Romania",
+        "nameAr": " رومانيا ",
+        "dialCode": "+40",
+        "isoCode": "RO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ro.svg",
+        "flagEmoji": "🇷🇴"
+    },
+    {
+        "nameEn": "Russia",
+        "nameAr": "روسيا",
+        "dialCode": "+7",
+        "isoCode": "RU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ru.svg",
+        "flagEmoji": "🇷🇺"
+    },
+    {
+        "nameEn": "Rwanda",
+        "nameAr": "رواندا",
+        "dialCode": "+250",
+        "isoCode": "RW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/rw.svg",
+        "flagEmoji": "🇷🇼"
+    },
+    {
+        "nameEn": "Saint Barthelemy",
+        "nameAr": "سانت بارتيليمي",
+        "dialCode": "+590",
+        "isoCode": "BL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/bl.svg",
+        "flagEmoji": "🇧🇱"
+    },
+    {
+        "nameEn": "Saint Helena, Ascension and Tristan Da Cunha",
+        "nameAr": "سانت هيلانة وأسنسيون وتريستان دا كونا",
+        "dialCode": "+290",
+        "isoCode": "SH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sh.svg",
+        "flagEmoji": "🇸🇭"
+    },
+    {
+        "nameEn": "Saint Kitts and Nevis",
+        "nameAr": "سانت كيتس ونيفيس",
+        "dialCode": "+1869",
+        "isoCode": "KN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/kn.svg",
+        "flagEmoji": "🇰🇳"
+    },
+    {
+        "nameEn": "Saint Lucia",
+        "nameAr": "سانت لوسيا",
+        "dialCode": "+1758",
+        "isoCode": "LC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lc.svg",
+        "flagEmoji": "🇱🇨"
+    },
+    {
+        "nameEn": "Saint Martin",
+        "nameAr": "سانت مارتن",
+        "dialCode": "+590",
+        "isoCode": "MF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/mf.svg",
+        "flagEmoji": "🇲🇫"
+    },
+    {
+        "nameEn": "Saint Pierre and Miquelon",
+        "nameAr": "سان بيير وميكلون",
+        "dialCode": "+508",
+        "isoCode": "PM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/pm.svg",
+        "flagEmoji": "🇵🇲"
+    },
+    {
+        "nameEn": "Saint Vincent and the Grenadines",
+        "nameAr": "سانت فنسنت وجزر غرينادين",
+        "dialCode": "+1784",
+        "isoCode": "VC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/vc.svg",
+        "flagEmoji": "🇻🇨"
+    },
+    {
+        "nameEn": "Samoa",
+        "nameAr": "ساموا",
+        "dialCode": "+685",
+        "isoCode": "WS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ws.svg",
+        "flagEmoji": "🇼🇸"
+    },
+    {
+        "nameEn": "San Marino",
+        "nameAr": "سان مارينو",
+        "dialCode": "+378",
+        "isoCode": "SM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sm.svg",
+        "flagEmoji": "🇸🇲"
+    },
+    {
+        "nameEn": "Sao Tome and Principe",
+        "nameAr": "ساو تومي وبرينسيبي",
+        "dialCode": "+239",
+        "isoCode": "ST",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/st.svg",
+        "flagEmoji": "🇸🇹"
+    },
+    {
+        "nameEn": "Saudi Arabia",
+        "nameAr": "المملكة العربية السعودية",
+        "dialCode": "+966",
+        "isoCode": "SA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sa.svg",
+        "flagEmoji": "🇸🇦"
+    },
+    {
+        "nameEn": "Senegal",
+        "nameAr": "السنغال",
+        "dialCode": "+221",
+        "isoCode": "SN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sn.svg",
+        "flagEmoji": "🇸🇳"
+    },
+    {
+        "nameEn": "Serbia",
+        "nameAr": "صربيا",
+        "dialCode": "+381",
+        "isoCode": "RS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/rs.svg",
+        "flagEmoji": "🇷🇸"
+    },
+    {
+        "nameEn": "Seychelles",
+        "nameAr": "سيشيل",
+        "dialCode": "+248",
+        "isoCode": "SC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sc.svg",
+        "flagEmoji": "🇸🇨"
+    },
+    {
+        "nameEn": "Sierra Leone",
+        "nameAr": "سيراليون",
+        "dialCode": "+232",
+        "isoCode": "SL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sl.svg",
+        "flagEmoji": "🇸🇱"
+    },
+    {
+        "nameEn": "Singapore",
+        "nameAr": "سنغافورة",
+        "dialCode": "+65",
+        "isoCode": "SG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sg.svg",
+        "flagEmoji": "🇸🇬"
+    },
+    {
+        "nameEn": "Sint Maarten",
+        "nameAr": "سينت مارتن",
+        "dialCode": "+1721",
+        "isoCode": "SX",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sx.svg",
+        "flagEmoji": "🇸🇽"
+    },
+    {
+        "nameEn": "Slovakia",
+        "nameAr": "سلوفاكيا",
+        "dialCode": "+421",
+        "isoCode": "SK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sk.svg",
+        "flagEmoji": "🇸🇰"
+    },
+    {
+        "nameEn": "Slovenia",
+        "nameAr": "سلوفينيا",
+        "dialCode": "+386",
+        "isoCode": "SI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/si.svg",
+        "flagEmoji": "🇸🇮"
+    },
+    {
+        "nameEn": "Solomon Islands",
+        "nameAr": "جزر سليمان",
+        "dialCode": "+677",
+        "isoCode": "SB",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sb.svg",
+        "flagEmoji": "🇸🇧"
+    },
+    {
+        "nameEn": "Somalia",
+        "nameAr": "الصومال",
+        "dialCode": "+252",
+        "isoCode": "SO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/so.svg",
+        "flagEmoji": "🇸🇴"
+    },
+    {
+        "nameEn": "South Africa",
+        "nameAr": "جنوب إفريقيا",
+        "dialCode": "+27",
+        "isoCode": "ZA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/za.svg",
+        "flagEmoji": "🇿🇦"
+    },
+    {
+        "nameEn": "South Georgia and the South Sandwich Islands",
+        "nameAr": "جورجيا الجنوبية وجزر ساندويتش الجنوبية",
+        "dialCode": "+500",
+        "isoCode": "GS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gs.svg",
+        "flagEmoji": "🇬🇸"
+    },
+    {
+        "nameEn": "South Sudan",
+        "nameAr": "جنوب السودان",
+        "dialCode": "+211",
+        "isoCode": "SS",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ss.svg",
+        "flagEmoji": "🇸🇸"
+    },
+    {
+        "nameEn": "Spain",
+        "nameAr": "إسبانيا",
+        "dialCode": "+34",
+        "isoCode": "ES",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/es.svg",
+        "flagEmoji": "🇪🇸"
+    },
+    {
+        "nameEn": "Sri Lanka",
+        "nameAr": "سريلانكا",
+        "dialCode": "+94",
+        "isoCode": "LK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/lk.svg",
+        "flagEmoji": "🇱🇰"
+    },
+    {
+        "nameEn": "Sudan",
+        "nameAr": "السودان",
+        "dialCode": "+249",
+        "isoCode": "SD",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sd.svg",
+        "flagEmoji": "🇸🇩"
+    },
+    {
+        "nameEn": "Suriname",
+        "nameAr": "سورينام",
+        "dialCode": "+597",
+        "isoCode": "SR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sr.svg",
+        "flagEmoji": "🇸🇷"
+    },
+    {
+        "nameEn": "Svalbard and Jan Mayen",
+        "nameAr": "سفالبارد وجان ماين",
+        "dialCode": "+47",
+        "isoCode": "SJ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sj.svg",
+        "flagEmoji": "🇸🇯"
+    },
+    {
+        "nameEn": "Sweden",
+        "nameAr": "السويد",
+        "dialCode": "+46",
+        "isoCode": "SE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/se.svg",
+        "flagEmoji": "🇸🇪"
+    },
+    {
+        "nameEn": "Switzerland",
+        "nameAr": "سويسرا",
+        "dialCode": "+41",
+        "isoCode": "CH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ch.svg",
+        "flagEmoji": "🇨🇭"
+    },
+    {
+        "nameEn": "Syrian Arab Republic",
+        "nameAr": "الجمهورية العربية السورية",
+        "dialCode": "+963",
+        "isoCode": "SY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/sy.svg",
+        "flagEmoji": "🇸🇾"
+    },
+    {
+        "nameEn": "Taiwan",
+        "nameAr": "تايوان",
+        "dialCode": "+886",
+        "isoCode": "TW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tw.svg",
+        "flagEmoji": "🇹🇼"
+    },
+    {
+        "nameEn": "Tajikistan",
+        "nameAr": "طاجيكستان",
+        "dialCode": "+992",
+        "isoCode": "TJ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tj.svg",
+        "flagEmoji": "🇹🇯"
+    },
+    {
+        "nameEn": "Tanzania, United Republic of Tanzania",
+        "nameAr": "تنزانيا , جمهورية تنزانيا المتحدة",
+        "dialCode": "+255",
+        "isoCode": "TZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tz.svg",
+        "flagEmoji": "🇹🇿"
+    },
+    {
+        "nameEn": "Thailand",
+        "nameAr": "تايلاند",
+        "dialCode": "+66",
+        "isoCode": "TH",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/th.svg",
+        "flagEmoji": "🇹🇭"
+    },
+    {
+        "nameEn": "Timor-Leste",
+        "nameAr": "تيمور - ليشتي",
+        "dialCode": "+670",
+        "isoCode": "TL",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tl.svg",
+        "flagEmoji": "🇹🇱"
+    },
+    {
+        "nameEn": "Togo",
+        "nameAr": "توغو",
+        "dialCode": "+228",
+        "isoCode": "TG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tg.svg",
+        "flagEmoji": "🇹🇬"
+    },
+    {
+        "nameEn": "Tokelau",
+        "nameAr": "توكيلاو",
+        "dialCode": "+690",
+        "isoCode": "TK",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tk.svg",
+        "flagEmoji": "🇹🇰"
+    },
+    {
+        "nameEn": "Tonga",
+        "nameAr": "تونغا",
+        "dialCode": "+676",
+        "isoCode": "TO",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/to.svg",
+        "flagEmoji": "🇹🇴"
+    },
+    {
+        "nameEn": "Trinidad and Tobago",
+        "nameAr": "ترينيداد وتوباغو",
+        "dialCode": "+1868",
+        "isoCode": "TT",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tt.svg",
+        "flagEmoji": "🇹🇹"
+    },
+    {
+        "nameEn": "Tunisia",
+        "nameAr": "تونس",
+        "dialCode": "+216",
+        "isoCode": "TN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tn.svg",
+        "flagEmoji": "🇹🇳"
+    },
+    {
+        "nameEn": "Turkey",
+        "nameAr": "تركيا",
+        "dialCode": "+90",
+        "isoCode": "TR",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tr.svg",
+        "flagEmoji": "🇹🇷"
+    },
+    {
+        "nameEn": "Turkmenistan",
+        "nameAr": "تركمانستان",
+        "dialCode": "+993",
+        "isoCode": "TM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tm.svg",
+        "flagEmoji": "🇹🇲"
+    },
+    {
+        "nameEn": "Turks and Caicos Islands",
+        "nameAr": "جزر تركس وكايكوس",
+        "dialCode": "+1649",
+        "isoCode": "TC",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tc.svg",
+        "flagEmoji": "🇹🇨"
+    },
+    {
+        "nameEn": "Tuvalu",
+        "nameAr": "توفالو",
+        "dialCode": "+688",
+        "isoCode": "TV",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/tv.svg",
+        "flagEmoji": "🇹🇻"
+    },
+    {
+        "nameEn": "Uganda",
+        "nameAr": "أوغندا",
+        "dialCode": "+256",
+        "isoCode": "UG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ug.svg",
+        "flagEmoji": "🇺🇬"
+    },
+    {
+        "nameEn": "Ukraine",
+        "nameAr": "أوكرانيا",
+        "dialCode": "+380",
+        "isoCode": "UA",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ua.svg",
+        "flagEmoji": "🇺🇦"
+    },
+   
+    {
+        "nameEn": "United Kingdom",
+        "nameAr": "المملكة المتحدة",
+        "dialCode": "+44",
+        "isoCode": "GB",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/gb.svg",
+        "flagEmoji": "🇬🇧"
+    },
+    {
+        "nameEn": "United States",
+        "nameAr": "الولايات المتحدة",
+        "dialCode": "+1",
+        "isoCode": "US",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/us.svg",
+        "flagEmoji": "🇺🇸"
+    },
+    {
+        "nameEn": "United States Minor Outlying Islands",
+        "nameAr": "جزر الولايات المتحدة البعيدة الصغيرة",
+        "dialCode": "+246",
+        "isoCode": "UMI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/umi.svg",
+        "flagEmoji": "🇺🇲"
+    },
+    {
+        "nameEn": "Uruguay",
+        "nameAr": "أوروغواي",
+        "dialCode": "+598",
+        "isoCode": "UY",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/uy.svg",
+        "flagEmoji": "🇺🇾"
+    },
+    {
+        "nameEn": "Uzbekistan",
+        "nameAr": "أوزبكستان",
+        "dialCode": "+998",
+        "isoCode": "UZ",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/uz.svg",
+        "flagEmoji": "🇺🇿"
+    },
+    {
+        "nameEn": "Vanuatu",
+        "nameAr": "فانواتو",
+        "dialCode": "+678",
+        "isoCode": "VU",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/vu.svg",
+        "flagEmoji": "🇻🇺"
+    },
+    {
+        "nameEn": "Venezuela, Bolivarian Republic of Venezuela",
+        "nameAr": "فنزويلا , جمهورية فنزويلا البوليفارية",
+        "dialCode": "+58",
+        "isoCode": "VE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ve.svg",
+        "flagEmoji": "🇻🇪"
+    },
+    {
+        "nameEn": "Vietnam",
+        "nameAr": "فيتنام",
+        "dialCode": "+84",
+        "isoCode": "VN",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/vn.svg",
+        "flagEmoji": "🇻🇳"
+    },
+    {
+        "nameEn": "Virgin Islands, British",
+        "nameAr": "جزر فيرجن البريطانية",
+        "dialCode": "+1284",
+        "isoCode": "VG",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/vg.svg",
+        "flagEmoji": "🇻🇬"
+    },
+    {
+        "nameEn": "Virgin Islands, U.S.",
+        "nameAr": "جزر فيرجن , الولايات المتحدة",
+        "dialCode": "+1340",
+        "isoCode": "VI",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/vi.svg",
+        "flagEmoji": "🇻🇮"
+    },
+    {
+        "nameEn": "Wallis and Futuna",
+        "nameAr": "واليس وفوتونا",
+        "dialCode": "+681",
+        "isoCode": "WF",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/wf.svg",
+        "flagEmoji": "🇼🇫"
+    },
+    {
+        "nameEn": "Yemen",
+        "nameAr": "اليمن",
+        "dialCode": "+967",
+        "isoCode": "YE",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/ye.svg",
+        "flagEmoji": "🇾🇪"
+    },
+    {
+        "nameEn": "Zambia",
+        "nameAr": "زامبيا",
+        "dialCode": "+260",
+        "isoCode": "ZM",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/zm.svg",
+        "flagEmoji": "🇿🇲"
+    },
+    {
+        "nameEn": "Zimbabwe",
+        "nameAr": "زمبابوي",
+        "dialCode": "+263",
+        "isoCode": "ZW",
+        "flag": "https://cdn.kcak11.com/CountryFlags/countries/zw.svg",
+        "flagEmoji": "🇿🇼"
+    }
+]

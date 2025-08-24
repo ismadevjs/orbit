@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ getSettingValue('site_name') }}</title>
+    <style>
+        /* Import Poppins font from Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            color: #333333;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            direction: rtl;
+        }
+        .header {
+            background-color: #008080;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .header img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            animation: slideIn 1s ease-out;
+        }
+        .content {
+            padding: 30px 20px;
+            line-height: 1.6;
+            animation: fadeIn 1s ease-out;
+        }
+        .content h2 {
+            color: #008080;
+            margin-bottom: 20px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .content p {
+            margin: 15px 0;
+            font-size: 16px;
+            color: #555555;
+        }
+        .cta {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta a {
+            background-color: #FF6F61;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+        }
+        .cta a:hover {
+            background-color: #e65c54;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .footer {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #888888;
+        }
+        .footer a {
+            color: #008080;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 20px;
+            }
+            .header, .content, .footer {
+                padding: 20px 15px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .content h2 {
+                font-size: 20px;
+            }
+            .content p {
+                font-size: 15px;
+            }
+            .cta a {
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <!-- Optional: Add your company logo here -->
+            <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="{{ getSettingValue('site_name') }}" />
+            <h1>{{ getSettingValue('site_name') }}</h1>
+        </div>
+        <div class="content">
+            <h2>مرحباً {{ $data['user']->name }},</h2>
+
+            <p>نشكرك على بدء عملية التحقق من الهوية (KYC). حالياً، نحن في انتظار البيانات اللازمة منك لإكمال هذه العملية.</p>
+
+            <p>للمتابعة، يرجى تسجيل الدخول إلى حسابك وتقديم المستندات المطلوبة في أقرب وقت ممكن.</p>
+
+            <div class="cta">
+                <a href="{{ route('login') }}">تقديم المستندات</a>
+            </div>
+
+            <p>إذا كنت بحاجة إلى مساعدة، يرجى الاتصال بفريق الدعم لدينا.</p>
+
+            <p>فريق الدعم | {{ getSettingValue('site_name') }}</p>
+        </div>
+        <div class="footer">
+            <p>إذا كان لديك أي استفسار، يرجى التواصل مع <a href="mailto:{{ getSettingValue('site_email') }}">فريق الدعم</a>.</p>
+            <p>© 2024 {{ getSettingValue('footer') }}. جميع الحقوق محفوظة.</p>
+        </div>
+    </div>
+</body>
+</html>

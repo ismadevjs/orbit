@@ -1,0 +1,45 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Counter CSS
+----------------------------------------*/
+.counter-section{
+    margin-top: -10px;
+}
+
+.counter-item{
+    @include breakpoint(sm){
+        text-align: center;
+    }
+    .title{
+        font-family: var(--rr-ff-heading);
+        font-size: 80px;
+        font-size: 700;
+        line-height: 1;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: var(--rr-color-heading-primary);
+        @include flex-vertical-center;
+        column-gap: 10px;
+        @include breakpoint(lg){
+            font-size: 60px;
+        }
+        @include breakpoint(sm){
+            justify-content: center;
+        }
+        .odometer-auto-theme{
+            font-family: inherit;
+            line-height: 1;
+        }
+    }
+    p{
+        font-family: var(--rr-ff-heading);
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+}
+
+/* !END: Counter CSS */

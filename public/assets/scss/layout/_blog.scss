@@ -1,0 +1,283 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Blog CSS
+----------------------------------------*/
+
+.post-card {
+    background-color: var(--rr-color-common-white);
+    border: 2px solid var(--rr-color-border-1);
+    border-radius: 30px;
+    overflow: hidden;
+    .post-thumb {
+        position: relative;
+        height: 350px;
+        overflow: hidden;
+        border-radius: 25px 25px 30px 30px;
+        @include breakpoint(sm){
+            height: 300px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s ease-in-out;
+            transform: scale(1);
+        }
+    }
+    .post-content {
+        padding: 35px;
+        @include breakpoint(lg){
+            padding: 35px 20px;
+        }
+        @include breakpoint(sm){
+            padding: 30px 20px;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+            @include breakpoint(md){
+                font-size: 18px;
+                br{
+                    display: none;
+                }
+            }
+            @include breakpoint(sm){
+                font-size: 16px;
+            }
+            a {
+                background: linear-gradient(var(--rr-color-heading-primary) 0%, var(--rr-color-heading-primary) 98%);
+                background-size: 0 2px;
+                background-repeat: no-repeat;
+                background-position: left 100%;
+                @include transition(all 0.3s ease-in-out);
+                &:hover {
+                    color: var(--rr-color-heading-primary);
+                    background-size: 100% 2px;
+                }
+            }
+        }
+        .blog-btn{
+            padding: 15px 40px;
+        }
+    }
+    &:hover{
+        .post-thumb{
+            img{
+                transform: scale(1.02);
+            }
+        }
+    }
+}
+
+.blog-space-card{
+    max-width: 445px;
+    width: 100%;
+    margin: 0 auto
+}
+
+
+.post-meta {
+    @include flex-vertical-center;
+    list-style: none;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    margin-bottom: 20px;
+    li {
+        font-family: var(--rr-ff-heading);
+        color: var(--rr-color-heading-primary);
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include flex-vertical-center;
+        column-gap: 10px;
+        i{
+            font-size: 14px;
+        }
+        &:not(:last-of-type){
+            margin-right: 20px;
+        }
+        a {
+            &:hover {
+                color: var(--rr-color-theme-primary);
+            }
+        }
+        @include breakpoint(sm){
+            font-size: 12px;
+        }
+    }
+}
+
+.grid-post-wrap{
+    padding-right: 31px;
+    border-right: 1px solid var(--rr-color-border-1);
+    @include breakpoint(md){
+        padding-right: 0;
+        border: none;
+        margin-bottom: 50px;
+    }
+}
+
+.pagination-wrap{
+    @include flex-vertical-center;
+    list-style: none;
+    column-gap: 10px;
+    li{
+        a{
+            background-color: transparent;
+            color: var(--rr-color-heading-primary);
+            font-weight: 700;
+            height: 60px;
+            width: 60px;
+            font-size: 20px;
+            @include flex-center;
+            line-height: 1;
+            border: 2px solid var(--rr-color-border-1);
+            border-radius: 10px;
+            &:hover{
+                background-color: var(--rr-color-theme-primary);
+            }
+        }
+        .active{
+            background-color: var(--rr-color-theme-primary);
+        }
+    }  
+}
+
+
+// Blog Section
+
+.blog-section-4{
+    padding-top: 220px;
+    @include breakpoint(lg){
+        padding-top: 140px;
+    }
+    @include breakpoint(md){
+        padding-top: 70px;
+    }
+    @include breakpoint(sm){
+        padding-top: 50px;
+    }
+}
+
+// Post Inner
+
+.post-inner{
+    margin-bottom: 30px;
+    border: 3px solid var(--rr-color-heading-primary);
+    .post-thumb{
+        height: 450px;
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        @include breakpoint(sm){
+            height: 350px;
+        }
+        .video-btn{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            a{
+                background-color: var(--rr-color-common-white);
+                color: var(--rr-color-heading-primary);
+                font-size: 26px;
+                height: 80px;
+                width: 80px;
+                @include flex-center;
+                border-radius: 50%;
+                border: 2px solid var(--rr-color-heading-primary);
+                position: relative;
+                &:before{
+                    background-color: var(--rr-color-heading-primary);
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 55%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+        &.video-post-thumb{
+            &:before{
+                background-color: rgba(0, 0, 0, 0.57);
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                visibility: hidden;
+                opacity: 0;
+                @include transition(all 0.3s ease-in-out);
+            }
+        }
+    }
+    .post-content{
+        .title{
+            font-size: 30px;
+            margin-bottom: 15px;
+            @include breakpoint(sm){
+                font-size: 22px;
+            }
+        }
+        p{
+            margin-bottom: 25px;
+        }
+    }
+    &:hover{
+        .post-thumb{
+            &.video-post-thumb{
+                &:before{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+.post-thumb-carousel{
+    .swiper-arrow{
+        .swiper-nav{
+            background-color: var(--rr-color-common-white);
+            color: var(--rr-color-heading-primary);
+            font-size: 24px;
+            height: 70px;
+            width: 70px;
+            @include flex-center;
+            border: 2px solid var(--rr-color-heading-primary);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 40px;
+            transform: translateY(-50%);
+            z-index: 2;
+            @include transition(all 0.3s ease-in-out);
+            &:hover{
+                background-color: var(--rr-color-theme-primary);
+            }
+            @include breakpoint(sm){
+                left: 10px;
+            }
+            &.swiper-next{
+                left: auto;
+                right: 40px;
+                @include breakpoint(sm){
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* !END: Theme Blog CSS */

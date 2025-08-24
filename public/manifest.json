@@ -1,0 +1,31 @@
+{
+    "name": "Amwalflow",
+    "short_name": "Amwalflow",
+    "description": "Your app description here",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "./logo_pwa.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./logo_192_pwa.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Home",
+            "url": "/",
+            "icons": [{"src": "./logo_pwa.png", "sizes": "192x192"}]
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Testi CSS
+----------------------------------------*/
+
+.testi-item{
+    background-color: var(--rr-color-common-white);
+    padding: 40px;
+    border: 2px solid var(--rr-color-heading-primary);
+    border-radius: 30px;
+    @include breakpoint(sm){
+        padding: 30px 20px;
+    }
+    .testi-thumb{
+        height: 85px;
+        width: 85px;
+        border-radius: 50%;
+        margin-bottom: 35px;
+        img{
+            filter: saturate(0);
+            @include transition(all 0.3s ease-in-out);
+        }
+    }
+    .content{
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #D2D2D2;
+        .title{
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            @include breakpoint(md){
+                font-size: 20px;
+            }
+        }
+        p{
+            color: var(--rr-color-heading-primary);
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 0;
+            @include breakpoint(md){
+                font-size: 15px;
+            }
+        }
+    }
+    .testi-author-info{
+        @include flex-vertical-center;
+        align-items: center;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        .review{
+            background-color: var(--rr-color-grey-1);
+            padding: 10px 20px;
+            display: inline-flex;
+            align-items: center;
+            list-style: none;
+            border-radius: 100px;
+            border: 1px solid var(--rr-color-heading-primary);
+            li{
+                color: #FFB422;
+                font-size: 12px;
+                &:not(:last-of-type){
+                    margin-right: 5px;
+                }
+            }
+        }
+        .name{
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            span{
+                font-family: var(--rr-ff-body);
+                font-size: 14px;
+                display: block;
+                font-weight: 500;
+                margin-top: 5px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    &:hover{
+        .testi-thumb{
+            img{
+                filter: saturate(1);
+            }
+        }
+    }
+}
+
+/* !END: Testi CSS */

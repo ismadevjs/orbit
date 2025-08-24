@@ -1,0 +1,618 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Slider CSS
+----------------------------------------*/
+.slider-section {
+    background-color: var(--rr-color-heading-primary);
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    overflow-x: clip;
+    .slider-img-wrap{
+        max-width: 960px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        @include breakpoint(xxxl){
+            max-width: 750px;
+            top: 118px;
+        }
+        @include breakpoint(xxl){
+            max-width: 700px;
+        }
+        @include breakpoint(xl){
+            max-width: 500px;
+            top: 138px;
+        }
+        @include breakpoint(lg){
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .shape{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+    }
+}
+
+.nunca-slider {
+    position: relative;
+    z-index: 2;
+    height: auto;
+    padding: 340px 0 116px 0;
+    max-width: 700px;
+    width: 100%;
+    overflow: hidden;
+    @include breakpoint(xl){
+        padding-top: 250px;
+    }
+    @include breakpoint(md){
+        padding-top: 200px;
+    }
+    .slider-arrow{
+        @include flex-vertical-center;
+        column-gap: 15px;
+        margin-top: 75px;
+        @include breakpoint(sm){
+            margin-top: 40px;
+        }
+        .slider-nav{
+            background-color: var(--rr-color-common-white);
+            color: var(--rr-color-heading-primary);
+            font-size: 24px;
+            height: 100px;
+            width: 100px;
+            @include flex-center;
+            border-radius: 50%;
+            @include transition(all 0.3s ease-in-out);
+            @include breakpoint(sm){
+                width: 60px;
+                height: 60px;
+                font-size: 16px;
+            }
+            &:hover{
+                background-color: var(--rr-color-theme-primary);
+            }
+        }
+    }
+}
+
+.slider-item {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    .slider-content-wrap {
+        max-width: 700px;
+        width: 100%;
+        .slider-content{
+            .section-heading{
+                margin-bottom: 40px;
+                .section-title{
+                    font-size: 60px;
+                    margin-bottom: 10px;
+                    @include breakpoint(sm){
+                        font-size: 30px;
+                    }
+                }
+            }
+            p{
+                font-size: 20px;
+                color: var(--rr-color-common-white);
+                width: 100%;
+                max-width: 670px;
+                margin-bottom: 50px;
+                @include breakpoint(sm){
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+            }
+            .slider-btn{
+                &:before,
+                &:after{
+                    background-color: var(--rr-color-common-white);
+                }
+                &:hover{
+                    color: var(--rr-color-heading-primary);
+                }
+            }
+        }
+    }
+}
+
+/* Text Animation */
+.nunca-animation,
+.nunca-animation span {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+.nunca-animation span {
+    display: inline-block;
+}
+
+/* Fade Effect */
+.nunca-fadeIn {
+    animation-name: asFadeIn;
+}
+
+@keyframes asFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nunca-fadeInLeft {
+    animation-name: asFadeInLeft;
+}
+
+@keyframes asFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nunca-fadeInRight {
+    animation-name: asFadeInRight;
+}
+
+@keyframes asFadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nunca-fadeInDown {
+    animation-name: asFadeInTop;
+}
+
+@keyframes asFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.nunca-fadeInUp {
+    animation-name: asFadeInBottom;
+}
+
+@keyframes asFadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Move From Effect */
+.nunca-moveFromLeft {
+    animation-name: asMoveFromLeft;
+}
+
+@keyframes asMoveFromLeft {
+    from {
+        visibility: hidden;
+        transform: translateX(-50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.nunca-moveFromRight {
+    animation-name: asMoveFromRight;
+}
+
+@keyframes asMoveFromRight {
+    from {
+        visibility: hidden;
+        transform: translateX(50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.nunca-moveFromTop {
+    animation-name: asMoveFromTop;
+}
+
+@keyframes asMoveFromTop {
+    from {
+        visibility: hidden;
+        transform: translateY(-50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+.nunca-moveFromBottom {
+    animation-name: asMoveFromBottom;
+}
+
+@keyframes asMoveFromBottom {
+    from {
+        visibility: hidden;
+        transform: translateY(50px);
+    }
+
+    to {
+        visibility: visible;
+    }
+}
+
+/* Blur Effect */
+
+.nunca-blurIn {
+    animation-name: asBlurIn;
+}
+
+@keyframes asBlurIn {
+    from {
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.nunca-blurInLeft {
+    animation-name: asBlurInLeft;
+}
+
+@keyframes asBlurInLeft {
+    from {
+        transform: translateX(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.nunca-blurInRight {
+    animation-name: asBlurInRight;
+}
+
+@keyframes asBlurInRight {
+    from {
+        transform: translateX(-50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.nunca-blurInTop {
+    animation-name: asBlurInTop;
+}
+
+@keyframes asBlurInTop {
+    from {
+        transform: translateY(50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+.nunca-blurInBottom {
+    animation-name: asBlurInBottom;
+}
+
+@keyframes asBlurInBottom {
+    from {
+        transform: translateY(-50px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* Zoom Effect */
+.nunca-zoomIn {
+    animation-name: asZoomIn;
+}
+
+@keyframes asZoomIn {
+    from {
+        transform: scale(5);
+        opacity: 0;
+    }
+}
+
+.nunca-zoomInLeft {
+    animation-name: asZoomInLeft;
+}
+
+@keyframes asZoomInLeft {
+    from {
+        transform: scale(5) translateX(-50%);
+        opacity: 0;
+    }
+}
+
+.nunca-zoomInRight {
+    animation-name: asZoomInRight;
+}
+
+@keyframes asZoomInRight {
+    from {
+        transform: scale(5) translateX(50%);
+        opacity: 0;
+    }
+}
+
+.nunca-zoomInTop {
+    animation-name: asZoomInTop;
+}
+
+@keyframes asZoomInTop {
+    from {
+        transform: scale(10) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nunca-zoomInBottom {
+    animation-name: asZoomInBottom;
+}
+
+@keyframes asZoomInBottom {
+    from {
+        transform: scale(10) translateY(50%);
+        opacity: 0;
+    }
+}
+
+/* Flip Effect */
+.nunca-flipInTop {
+    animation-name: asFlipInTop;
+}
+
+@keyframes asFlipInTop {
+    from {
+        transform: perspective(600px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: perspective(600px) rotateX(180deg);
+        transform-origin: 0 0;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        transform: perspective(600px);
+    }
+}
+
+.nunca-flipInBottom {
+    animation-name: asFlipInBottom;
+}
+
+@keyframes asFlipInBottom {
+    from {
+        transform: perspective(600px);
+        opacity: 0;
+    }
+
+    30% {
+        transform: perspective(600px) rotateX(180deg);
+        transform-origin: bottom;
+        animation-timing-function: ease-out;
+    }
+
+    to {
+        transform: perspective(600px);
+    }
+}
+
+/* Roll Effect */
+.nunca-rollFromLeft {
+    animation-name: asRollFromLeft;
+}
+
+@keyframes asRollFromLeft {
+    from {
+        transform: translateX(-60px) perspective(600px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+.nunca-rollFromRight {
+    animation-name: asRollFromRight;
+}
+
+@keyframes asRollFromRight {
+    from {
+        transform: translateX(60px) perspective(600px) rotateY(-180deg);
+        opacity: 0;
+    }
+}
+
+.nunca-rollFromTop {
+    animation-name: asRollFromTop;
+}
+
+@keyframes asRollFromTop {
+    from {
+        transform: translateY(-60px) perspective(600px) rotateX(180deg);
+        opacity: 0;
+    }
+}
+
+.nunca-rollFromBottom {
+    animation-name: asRollFromBottom;
+}
+
+@keyframes asRollFromBottom {
+    from {
+        transform: translateY(60px) perspective(600px) rotateX(-180deg);
+        opacity: 0;
+    }
+}
+
+/* Rotate Skate Effect */
+.nunca-rotateSkateInRight {
+    animation-name: asRotateSkateInRight;
+}
+
+@keyframes asRotateSkateInRight {
+    from {
+        transform: scaleX(0.2) translateX(100px);
+        opacity: 0;
+    }
+}
+
+.nunca-rotateSkateInLeft {
+    animation-name: asRotateSkateInLeft;
+}
+
+@keyframes asRotateSkateInLeft {
+    from {
+        transform: scaleX(0.2) translateX(-100px);
+        opacity: 0;
+    }
+}
+
+.nunca-rotateSkateInTop {
+    animation-name: asRotateSkateInTop;
+}
+
+@keyframes asRotateSkateInTop {
+    from {
+        transform: scaleY(0.2) translateY(-100px);
+        opacity: 0;
+    }
+}
+
+.nunca-rotateSkateInBottom {
+    animation-name: asRotateSkateInBottom;
+}
+
+@keyframes asRotateSkateInBottom {
+    from {
+        transform: scaleY(0.2) translateY(100px);
+        opacity: 0;
+    }
+}
+
+/* PopUp Effect */
+.nunca-popUp {
+    animation-name: asPopUp;
+}
+
+@keyframes asPopUp {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        transform: scale(1.1);
+        visibility: visible;
+    }
+}
+
+.nunca-popUpLeft {
+    animation-name: asPopUpLeft;
+}
+
+@keyframes asPopUpLeft {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+        transform: translateX(-20px) scale(1.1);
+        animation-timing-function: ease-in;
+    }
+}
+
+.nunca-popUpRight {
+    animation-name: asPopUpRight;
+}
+
+@keyframes asPopUpRight {
+    0% {
+        visibility: hidden;
+    }
+
+    50% {
+        visibility: visible;
+        transform: translateX(20px) scale(1.1);
+        animation-timing-function: ease-in;
+    }
+}
+
+/* Kenburns Top */
+
+.swiper-slide-active .kenburns-top {
+	-webkit-animation-name: kenburns-top;
+	animation-name: kenburns-top;
+}
+
+@-webkit-keyframes kenburns-top {
+	0% {
+		-webkit-transform: scale(1) translateY(0);
+		transform: scale(1) translateY(0);
+		-webkit-transform-origin: 50% 16%;
+		transform-origin: 50% 16%;
+	}
+
+	100% {
+		-webkit-transform: scale(1.08) translateY(-15px);
+		transform: scale(1.08) translateY(-15px);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+	}
+}
+
+@keyframes kenburns-top {
+	0% {
+		-webkit-transform: scale(1) translateY(0);
+		transform: scale(1) translateY(0);
+		-webkit-transform-origin: 50% 16%;
+		transform-origin: 50% 16%;
+	}
+
+	100% {
+		-webkit-transform: scale(1.08) translateY(-15px);
+		transform: scale(1.08) translateY(-15px);
+		-webkit-transform-origin: top;
+		transform-origin: top;
+	}
+}
+
+
+
+/* !END: Theme Slider CSS */

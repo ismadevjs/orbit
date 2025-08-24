@@ -1,0 +1,61 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Sponsor CSS
+----------------------------------------*/
+
+.sponsor-section{
+    background-color: var(--rr-color-heading-primary);
+    padding: 100px 0;
+    @include breakpoint(md){
+        padding: 70px 0;
+    }
+    @include breakpoint(sm){
+        padding: 60px 0;
+    }
+}
+
+.sponsor-text{
+    .title{
+        color: var(--rr-color-common-white);
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 60px;
+    }
+}
+
+.sponsor-item{
+    height: 65px;
+    @include flex-center;
+}
+
+// Sponsor 2
+
+.sponsor-2{
+    background-color: transparent;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.sponsor-wrapper{
+    background-color: var(--rr-color-heading-primary);
+    max-width: 1840px;
+    width: 100%;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 60px;
+    padding: 100px 0;
+    @include breakpoint(md){
+        padding: 70px 0;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    @include breakpoint(sm){
+        padding: 60px 0;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+/* !END: Sponsor CSS */

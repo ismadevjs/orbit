@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+
+/* Apply Cairo font to the entire site */
+body {
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+
+/* Optional: Override specific elements */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+}
+
+p, a, span {
+    font-family: 'Noto Kufi Arabic', sans-serif !important;
+}

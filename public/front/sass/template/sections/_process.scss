@@ -1,0 +1,121 @@
+/* Process Area 1 ---------------------------------- */
+
+.process-card {
+    background-color: $white-color;
+    padding: 50px 40px 44px;
+    border-radius: 20px;
+    &_wrapp{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 35px;
+    }
+    &-icon {
+    }
+    &_number {
+        font-weight: 700;
+        font-size: 60.75px;
+        line-height: 60.75px;
+        color: rgba(25, 53, 45,  0.05);
+        margin-bottom: 0;
+    }
+
+
+    .process-card-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 12px;
+        margin-bottom: -0.4rem;
+    }
+
+    .process-card-text {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $title-font;
+        margin-bottom: 0px;
+    }
+
+    &:hover {}
+}
+
+/* Process Area 2 ---------------------------------- */
+.process-area-2 {
+    background-size: cover;
+    padding-bottom: calc(120px + 175px);
+
+    @include md {
+        padding-bottom: calc(80px + 175px);
+    }
+}
+
+.process-card-wrap2 {
+    position: relative;
+
+    &:after {
+        content: "\f105";
+        position: absolute;
+        font-family: $icon-font;
+        display: inline-block;
+        font-size: 40px;
+        color: $white-color;
+        font-weight: 700;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, 0);
+        opacity: 0.1;
+    }
+
+    &:last-child {
+        &:after {
+            display: none;
+        }
+    }
+
+    @include xl {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.process-card.style2 {
+    border: 2px solid rgba($color: #ffffff, $alpha: 0.1);
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 0 30px 30px;
+
+    .process-card-number {
+        background: $theme-color;
+        display: inline-block;
+        border-radius: 5px;
+        padding: 19px 20px;
+        min-width: 217px;
+        font-size: 26px;
+        font-weight: 900;
+        font-family: $title-font;
+        color: $white-color;
+        transform: translate(0, -50%);
+        margin-bottom: -7px;
+    }
+
+    .process-card-title {
+        color: $white-color;
+        font-size: 26px;
+        font-weight: 900;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .process-card-text {
+        color: $white-color;
+        margin-bottom: 27px;
+    }
+}
+
+@include xs {
+    .process-card.style2 .process-card-number {
+        padding: 12px 20px;
+        min-width: 150px;
+        font-size: 20px;
+    }
+}

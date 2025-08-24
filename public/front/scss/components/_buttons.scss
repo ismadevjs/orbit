@@ -1,0 +1,115 @@
+@use "../utilities" as *;
+
+/** Buttons CSS */
+
+.rr-primary-btn {
+    background-color: var(--rr-color-theme-primary);
+    font-family: var(--rr-ff-heading);
+    color: var(--rr-color-heading-primary);
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 20px 40px;
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    border: 2px solid var(--rr-color-heading-primary);
+    &:after,
+    &:before {
+        background-color: var(--rr-color-heading-primary);
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        transform: skew(90deg) translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;   
+        position: absolute;
+        inset: 50%;
+        left: 25%;
+        z-index: -1;
+    }
+    &:before{
+        top: -50%;
+        left: -25%;
+        transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+    &:hover{
+        color: var(--rr-color-common-white);
+        &:before{
+            transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+        }
+        &:after{
+            transform: skew(45deg) translate(-50%, -50%);
+        }
+    }
+    i{
+        margin-left: 10px;
+        font-size: 16px;
+        transition: all 0.3s ease-in-out;
+    }
+    &:focus{
+        color: var(--rr-color-heading-primary);
+    }
+}
+
+.rr-white-btn {
+    background-color: var(--rr-color-theme-primary);
+    font-family: var(--rr-ff-heading);
+    color: var(--rr-color-heading-primary);
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 20px 40px;
+    border-radius: 100px;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    border: 2px solid var(--rr-color-theme-primary);
+    &:after,
+    &:before {
+        background-color: var(--rr-color-common-white);
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        transform: skew(90deg) translate(-50%, -50%);
+        transition: all 0.5s ease-in-out;   
+        position: absolute;
+        inset: 50%;
+        left: 25%;
+        z-index: -1;
+    }
+    &:before{
+        top: -50%;
+        left: -25%;
+        transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+    }
+    &:hover{
+        color: var(--rr-color-heading-primary);
+        border: 2px solid var(--rr-color-common-white);
+        &:before{
+            transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+        }
+        &:after{
+            transform: skew(45deg) translate(-50%, -50%);
+        }
+    }
+    i{
+        margin-left: 10px;
+        font-size: 16px;
+        transform: rotate(-45deg);
+        transition: all 0.3s ease-in-out;
+    }
+    &:focus{
+        color: var(--rr-color-heading-primary);
+    }
+}

@@ -1,0 +1,31 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Process CSS
+----------------------------------------*/
+
+.process-item{
+    .number{
+        font-family: var(--rr-ff-heading);
+        display: inline-block;
+        color: #2C3135;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #2C3135;
+        margin-bottom: 25px;
+    }
+    .title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    p{
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+}
+
+/* !END: Process CSS */

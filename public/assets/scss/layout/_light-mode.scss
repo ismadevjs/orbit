@@ -1,0 +1,35 @@
+/* Common Colors */
+
+[data-theme="light"] body {
+    background-color: var(--rr-color-common-white);
+    color: #74787C;
+}
+
+[data-theme="light"] {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: var(--rr-color-heading-primary);
+    }
+    
+    p{
+        color: #74787C;
+    }
+}
+
+[data-theme="light"]{
+    .section-heading .section-title{
+        color: var(--rr-color-heading-primary);
+    }
+
+    .section-heading{
+        .bg-text{
+            color: #f8f8f8;
+            -webkit-text-stroke-width: 0.5px;
+            -webkit-text-stroke-color: #E8E9EF;
+        }
+    }
+}

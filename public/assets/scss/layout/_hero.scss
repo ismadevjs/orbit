@@ -1,0 +1,419 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Hero CSS
+----------------------------------------*/
+
+.hero-section{
+    position: relative;
+    z-index: -1;
+    .hero-img{
+        position: absolute;
+        right: 0;
+        bottom: 75px;
+        z-index: -1;
+        border-radius: 60px 0 0 60px;
+        border: 5px solid var(--rr-color-heading-primary);
+        border-right: none;
+        overflow: hidden;
+        @include breakpoint(sm){
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .shape{
+        position: absolute;
+        top: 50%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .overlay{
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        border-radius: 30px;
+        @include breakpoint(lg){
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.hero-content{
+    padding: 370px 0 220px 0;
+    position: relative;
+    z-index: 5;
+    @include breakpoint(md){
+        padding: 80px 0 100px 0;
+    }
+    .title{
+        font-size: 90px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        br{
+            display: block;
+        }
+        @include breakpoint(md){
+            font-size: 60px;
+        }
+        @include breakpoint(sm){
+            font-size: 30px;
+        }
+    }
+    p{
+        color: var(--rr-color-heading-primary);
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 40px;
+        @include breakpoint(md){
+            br{
+                display: none;
+            }
+        }
+        @include breakpoint(sm){
+            font-size: 15px;
+        }
+    }
+}
+
+
+// Hero Section 2
+
+.hero-section-2{
+    background-color: #000;
+    position: relative;
+    z-index: 1;
+    .hero-img-2{
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+        @include breakpoint(md){
+            left: 20%;
+        }
+        img{
+            height: 100%;
+            filter: saturate(0) contrast(110%);
+            object-fit: cover;
+        }
+    }
+}
+
+.hero-content-2{
+    padding: 400px 0 180px 0;
+    @include breakpoint(md){
+        padding: 150px 0;
+    }
+    @include breakpoint(sm){
+        padding: 100px 0;
+    }
+    .sub-title{
+        color: var(--rr-color-common-white);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        @include breakpoint(md){
+            font-size: 10px;
+            line-height: 1.6;
+        }
+    }
+    .title{
+        color: var(--rr-color-common-white);
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        @include breakpoint(sm){
+            font-size: 28px;
+        }
+    }
+    p{
+        color: #B3B6B8;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 40px;
+        @include breakpoint(sm){
+            font-size: 15px;
+        }
+    }
+    .hero-btn{
+        background-color: var(--rr-color-common-white);
+        &:after,
+        &:before{
+            background-color: var(--rr-color-theme-primary);
+        }
+        &:hover{
+            color: var(--rr-color-heading-primary);
+        }
+    }
+}
+
+
+// Hero Section 3
+
+.hero-section-3{
+    background-color: var(--rr-color-heading-primary);
+    position: relative;
+    z-index: 1;
+    .hero-img-3{
+        max-width: 904px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        @include breakpoint(lg){
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.hero-content-3{
+    padding: 360px 0 180px 0;
+    position: relative;
+    z-index: 5;
+    @include breakpoint(md){
+        padding: 150px 0;
+    }
+    @include breakpoint(md){
+        padding: 100px 0;
+    }
+    .title{
+        color: var(--rr-color-common-white);
+        text-transform: uppercase;
+        font-size: 54px;
+        @include breakpoint(md){
+            font-size: 44px;
+        }
+        @include breakpoint(sm){
+            font-size: 20px;
+        }
+        span{
+            font-size: 95px;
+            color: var(--rr-color-theme-primary);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            margin: 20px 0 35px 0;
+            @include breakpoint(md){
+                font-size: 64px;
+            }
+            @include breakpoint(sm){
+                display: block;
+                font-size: 35px;
+                margin: 10px 0 20px 0;
+            }
+            &:before{
+                background-color: var(--rr-color-theme-primary);
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 7px;
+                bottom: 0;
+                left: 0;
+                @include breakpoint(sm){
+                    height: 4px;
+                }
+            }
+        }
+    }
+    .hero-btn-wrap{
+        @include flex-vertical-center;
+        column-gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 15px;
+        margin-top: 50px;
+        .rr-white-btn{
+            background-color: var(--rr-color-common-white);
+            border: 2px solid var(--rr-color-common-white);
+            &:after,
+            &:before{
+                background-color: var(--rr-color-theme-primary);
+            }
+            &:hover{
+                border: 2px solid var(--rr-color-theme-primary);
+            }
+        }
+        .play-btn{
+            position: relative;
+            z-index: 2;
+            a{
+                background-color: transparent;
+                color: var(--rr-color-common-white);
+                @include flex-vertical-center;
+                justify-content: center;
+                column-gap: 10px;
+                padding: 17px 40px;
+                border-radius: 100px;
+                font-family: var(--rr-ff-heading);
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                border: 2px solid var(--rr-color-theme-primary);
+                &:hover{
+                    background-color: var(--rr-color-theme-primary);
+                    color: var(--rr-color-heading-primary);
+                }
+                i{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+// Hero Section 4
+
+.hero-section-4{
+    background-color: var(--rr-color-heading-primary);
+    position: relative;
+    z-index: 1;
+    .bg-item{
+        .shape-1{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .shape-2{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: -1;
+        }
+        .hero-img-shape{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            @include breakpoint(xxxl){
+                left: -10%;
+                bottom: -10%;
+            }
+            @include breakpoint(xl){
+                display: none;
+            }
+        }
+    }
+}
+
+.hero-content-4{
+    padding: 365px 0 200px 0;
+    @include breakpoint(md){
+        padding: 150px 0;
+    }
+    @include breakpoint(sm){
+        padding: 100px 0;
+    }
+    .sub-title{
+        color: var(--rr-color-common-white);
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        @include breakpoint(sm){
+            font-size: 12px;
+            line-height: 1.7;
+        }
+    }
+    .title{
+        color: var(--rr-color-common-white);
+        font-size: 80px;
+        font-weight: 800;
+        line-height: 1;
+        margin-right: 250px;
+        @include breakpoint(xl){
+            margin-right: 200px;
+        }
+        @include breakpoint(lg){
+            margin-right: 100px;
+            font-size: 60px;
+        }
+        @include breakpoint(md){
+            font-size: 50px;
+        }
+        @include breakpoint(sm){
+            margin-right: 0;
+            font-size: 24px;
+        }
+        span{
+            display: block;
+        }
+        &.title-2{
+            margin-right: 0;
+            margin-left: 250px;
+            margin-top: 30px;
+            margin-bottom: 40px;
+            @include breakpoint(xl){
+                margin-right: 0;
+                margin-left: 200px;
+            }
+            @include breakpoint(lg){
+                margin-right: 0;
+                margin-left: 100px;
+            }
+            @include breakpoint(sm){
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+    }
+    p{
+        color: #B3B6B8;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 40px;
+        @include breakpoint(sm){
+            font-size: 15px;
+        }
+    }
+    .rr-white-btn{
+        background-color: var(--rr-color-common-white);
+        border: 2px solid var(--rr-color-common-white);
+        &:after,
+        &:before{
+            background-color: var(--rr-color-theme-primary);
+        }
+        &:hover{
+            border: 2px solid var(--rr-color-theme-primary);
+        }
+    }
+}
+
+/* !END: Hero CSS */

@@ -1,0 +1,59 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Page Header CSS
+----------------------------------------*/
+
+.office-item{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    grid-gap: 40px;
+    padding: 40px;
+    border: 1px solid #E4E4E4;
+    border-radius: 30px;
+    @include transition(all 0.3s ease-in-out);
+    @include breakpoint(md){
+        grid-template-columns: 1fr;
+    }
+    .office-img{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border: 2px solid var(--rr-color-heading-primary);
+    }
+    .office-content{
+        .title{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            position: relative;
+            &:before{
+                background-color: var(--rr-color-heading-primary);
+                content: "";
+                width: 70px;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        a,
+        span{
+            font-size: 16px;
+            font-weight: 500;
+            display: block;
+        }
+        a{
+            color: var(--rr-color-text-body);
+        }
+    }
+    &:hover{
+        background-color: var(--rr-color-theme-primary);
+        border: 1px solid var(--rr-color-heading-primary);
+    }
+}
+
+/* !END: Page Header CSS */

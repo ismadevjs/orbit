@@ -1,0 +1,60 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Page Header CSS
+----------------------------------------*/
+
+.pricing-item{
+    background-color: #F4F4F2;
+    padding: 50px;
+    border-radius: 30px;
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    .pricing-top{
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #D9D9D9;
+        .title{
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .price{
+            font-size: 36px;
+            font-weight: 600;
+            span{
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    .pricing-bottom{
+        .pricing-list{
+            li{
+                @include flex-vertical-center;
+                column-gap: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--rr-color-heading-primary);
+                line-height: 1;
+                &:not(:last-of-type){
+                    margin-bottom: 15px;
+                }
+                &:nth-child(4),
+                &:nth-child(5){
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+    .pricing-btn{
+        margin-top: 40px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+
+/* !END: Page Header CSS */

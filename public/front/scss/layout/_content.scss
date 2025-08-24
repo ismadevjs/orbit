@@ -1,0 +1,116 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+    START: Content CSS
+----------------------------------------*/
+
+.content-img-mask{
+    max-width: 620px;
+    width: 100%;
+    height: 520px;
+    mask-image: url(../img/images/content-img-mask.png);
+    mask-repeat: no-repeat;
+    @include breakpoint(lg){
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.content-info{
+    .section-heading{
+        .section-title{
+            @include breakpoint(sm){
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+    .content-list{
+        padding-left: 20px;
+        margin-bottom: 40px;
+        li{
+            color: var(--rr-color-heading-primary);
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+            &:not(:last-of-type){
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+// Content 2
+
+.content-left-info{
+    max-width: 760px;
+    width: 100%;
+    .content-counter-items{
+        max-width: 610px;
+        width: 100%;
+        @include flex-vertical-center;
+        column-gap: 30px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        .content-counter{
+            .title{
+                font-size: 80px;
+                line-height: 1;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: var(--rr-color-heading-primary);
+                @include breakpoint(sm){
+                    font-size: 50px;
+                }
+                .odometer-auto-theme{
+                    font-family: inherit;
+                    line-height: 1;
+                }
+            }
+            p{
+                font-family: var(--rr-ff-heading);
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 0;
+                text-transform: uppercase;
+                padding-left: 10px;
+            }
+        }
+    }
+    .desc{
+        font-size: 18px;
+        @include breakpoint(sm){
+            font-size: 15px;
+        }
+    }
+}
+
+.content-img-2{
+    height: 523px;
+    max-width: 560px;
+    width: 100%;
+    border-radius: 60px;
+    border: 3px solid var(--rr-color-heading-primary);
+    @include breakpoint(md){
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    @include breakpoint(sm){
+        height: 350px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* !END: Content CSS */
