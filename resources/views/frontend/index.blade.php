@@ -1,6 +1,6 @@
 @extends('layouts.frontend')
 
-@section('title', 'Email Marketing Sass Landing Page')
+@section('title', 'FliSim - Activate your eSIM in 60 seconds — campus-ready')
 
 @section('content')
     <!-- ===== HERO AREA START ======= -->
@@ -9,19 +9,18 @@
             <div class="row align-items-center hero2-content">
                 <div class="col-lg-6">
                     <div class="main-headding">
-                        {{dd(getTable('carousels'))}}
-                        <span class="span">{{getTable('carousels')->name}}</span>
-                        <h1 class="text-anime-style-3">Ai Powered Email Deliverability & Reputation Tool</h1>
+                        <span class="span">60-Second eSIM Activation</span>
+                        <h1 class="text-anime-style-3">Activate your eSIM in 60 seconds — campus-ready</h1>
                         <p data-aos="fade-right" data-aos-duration="800">
-                            Revolutionize your email marketing strategy with cutting-edge <br /> and software designed to
-                            elevate your campaigns. Our intuitive platform is offers a seamless interface, empowering
-                            software.
+                            WhatsApp support in Turkish, Arabic, and English. <br />
+                            Perfect for students and expats in Türkiye. Instant activation, <br />
+                            secure payment, and multilingual support available 24/7.
                         </p>
 
                         <div class="space30"></div>
                         <div class="hero-btns" data-aos="fade-right" data-aos-duration="1100">
-                            <a href="{{ url('login') }}" class="theme-btn2">Send Smarter Emails</a>
-                            <a href="{{ url('features') }}" class="theme-btn3">Explore Features</a>
+                            <a href="{{ url('checkout') }}" class="theme-btn2">Activate eSIM Now</a>
+                            <a href="#compatibility" class="theme-btn3">Is my phone compatible?</a>
                         </div>
                     </div>
                 </div>
@@ -52,8 +51,8 @@
             <div class="row">
                 <div class="col-lg-7 m-auto text-center">
                     <div class="headding2">
-                        <span class="span">Why Choose eSoft?</span>
-                        <h2 class="text-anime-style-3">Empower Brand: Transform <br /> Through Email Campaigns</h2>
+                        <span class="span">Popular for students & expats in Türkiye</span>
+                        <h2 class="text-anime-style-3">Choose Your Perfect <br /> eSIM Plan</h2>
                     </div>
                 </div>
             </div>
@@ -65,32 +64,28 @@
                         <div class="accordion-item active" data-aos="fade-right" data-aos-duration="800">
                             <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button"
                                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">Prepare your domain inbox</button></h2>
+                                    aria-controls="collapseOne">Türkiye 10GB - Most chosen</button></h2>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">Experience peace mind with our deliver ability-focused product,
-                                    eeSoftped & fail- an, real-time google mail checked notifications.</div>
+                                <div class="accordion-body">Instant email QR • Works on most modern phones • No store visit • Perfect for students and expats.</div>
                             </div>
                         </div>
                         <div class="accordion-item" data-aos="fade-right" data-aos-duration="1000">
                             <h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">Email health check-up</button></h2>
+                                    aria-expanded="false" aria-controls="collapseTwo">Türkiye 5GB - Light users</button></h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">Experience peace mind with our deliver ability-focused product,
-                                    eeSoftped & fail- an, real-time google mail checked notifications.</div>
+                                <div class="accordion-body">Quick trips & light users • Instant email QR • Works on most modern phones • No store visit needed.</div>
                             </div>
                         </div>
                         <div class="accordion-item" data-aos="fade-right" data-aos-duration="1200">
                             <h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed"
                                     type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">How to write a cold email
-                                    replies</button></h2>
+                                    aria-expanded="false" aria-controls="collapseThree">24-hour Activation Guarantee</button></h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
-                                <div class="accordion-body">Experience peace mind with our deliver ability-focused product,
-                                    eeSoftped & fail- an, real-time google mail checked notifications.</div>
+                                <div class="accordion-body">We'll help you get online fast with our 24-hour activation guarantee and WhatsApp support in TR/AR/EN.</div>
                             </div>
                         </div>
                     </div>
@@ -98,7 +93,7 @@
                     <div class="space30"></div>
 
                     <div class="" data-aos="fade-right" data-aos-duration="900">
-                        <a href="{{ url('features') }}" class="theme-btn2">Boost Campaigns Now</a>
+                        <a href="{{ url('checkout?plan=turkey-10gb') }}" class="theme-btn2">Get 10GB Now</a>
                     </div>
                 </div>
 
@@ -124,14 +119,12 @@
             <div class="row">
                 <div class="col-lg-5">
                     <div class="headding2-w">
-                        <h2 class="text-anime-style-3">Email Innovation: Craft Marketing An Success</h2>
+                        <h2 class="text-anime-style-3">eSIM Innovation: Connect Instantly With Success</h2>
                         <div class="space16"></div>
-                        <p data-aos="fade-right" data-aos-duration="800">Email marketing journey transforms into a
-                            streamlined, an powerful experience. Our cutting-edge platform eeSofts you with the tools to
-                            craft compelling, personalized</p>
+                        <p data-aos="fade-right" data-aos-duration="800">Your mobile connectivity journey transforms into a streamlined, powerful experience. Our cutting-edge eSIM platform equips you with instant activation, multilingual support</p>
                         <div class="space30"></div>
                         <div class="" data-aos="fade-right" data-aos-duration="1000">
-                            <a href="{{ url('account') }}" class="theme-btn3">Start For Free Now</a>
+                            <a href="{{ url('checkout') }}" class="theme-btn3">Start For Free Now</a>
                         </div>
                     </div>
                 </div>
@@ -161,7 +154,7 @@
                 <div class="col-lg-6 m-auto text-center">
                     <div class="headding2">
                         <span class="span">How It Works</span>
-                        <h2 class="text-anime-style-3">Next-Level Email Strategies</h2>
+                        <h2 class="text-anime-style-3">3 Simple Steps to Get Connected</h2>
                     </div>
                 </div>
             </div>
@@ -193,19 +186,19 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="800">
-                                        <h3>Create Engaging Campaigns</h3>
+                                        <h3>Choose Your Türkiye Plan</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="1000">
-                                        <h3>Automate Workflows</h3>
+                                        <h3>Pay Securely with Visa/Mastercard</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="1100">
-                                        <h3>Grow Your Reach</h3>
+                                        <h3>Get Instant QR via Email</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
                                     </div>
                                 </div>
@@ -215,19 +208,19 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item">
-                                        <h3>Create Engaging Campaigns</h3>
+                                        <h3>Scan the QR Code</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item">
-                                        <h3>Automate Workflows</h3>
+                                        <h3>Turn Data Roaming ON</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item">
-                                        <h3>Grow Your Reach</h3>
+                                        <h3>Connect to Turkish Networks</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
                                     </div>
                                 </div>
@@ -237,19 +230,19 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item">
-                                        <h3>Create Engaging Campaigns</h3>
+                                        <h3>You're Online!</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item">
-                                        <h3>Automate Workflows</h3>
+                                        <h3>WhatsApp Support Available</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="tabs-box-item">
-                                        <h3>Grow Your Reach</h3>
+                                        <h3>Download Orbit App</h3>
                                         <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
                                     </div>
                                 </div>
@@ -270,16 +263,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="headding2">
-                        <span class="span">Email Deliverability</span>
-                        <h5 class="text-anime-style-3">Enhance Cold Email And Inbox Delivery</h5>
+                        <span class="span">eSIM Benefits</span>
+                        <h5 class="text-anime-style-3">Usage Meter & 1-Tap Recharge</h5>
                         <div class="space16"></div>
-                        <p data-aos="fade-right" data-aos-duration="800">Experience peace of mind with our
-                            deliverability-focused product, eeSoftped & fail-safes, real-time notifications, and spam
-                            prevention, ensuring your emails consistently land in the right inboxes and sparing you the
-                            frustration of spam placement.</p>
+                        <p data-aos="fade-right" data-aos-duration="800">Experience peace of mind with the Orbit app featuring usage meter, 1-tap recharge, and the ability to switch country on eligible plans, ensuring seamless connectivity wherever you go.</p>
                         <div class="space24"></div>
                         <div class="" data-aos="fade-right" data-aos-duration="1000">
-                            <a href="{{ url('account') }}" class="theme-btn2">Get Started Now</a>
+                            <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
                         </div>
                     </div>
                 </div>
@@ -315,16 +305,13 @@
 
                 <div class="col-lg-5">
                     <div class="headding2 pbmit-heading-subheading animation-style2">
-                        <span class="span">Email Deliverability</span>
-                        <h5 class="text-anime-style-3">Enhance Cold Email And Inbox Delivery</h5>
+                        <span class="span">WhatsApp Support</span>
+                        <h5 class="text-anime-style-3">Turkish, Arabic & English Support</h5>
                         <div class="space16"></div>
-                        <p data-aos="fade-left" data-aos-duration="800">Experience peace of mind with our
-                            deliverability-focused product, eeSoftped & fail-safes, real-time notifications, and spam
-                            prevention, ensuring your emails consistently land in the right inboxes and sparing you the
-                            frustration of spam placement.</p>
+                        <p data-aos="fade-left" data-aos-duration="800">Get instant help with our multilingual WhatsApp support available 10:00–01:00 KSA. Our team speaks Turkish, Arabic, and English to assist students and expats in Türkiye.</p>
                         <div class="space24"></div>
                         <div class="" data-aos="fade-left" data-aos-duration="1000">
-                            <a href="{{ url('account') }}" class="theme-btn2">Get Started Now</a>
+                            <a href="https://wa.me/your-number" class="theme-btn2" target="_blank">Chat on WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -346,15 +333,14 @@
 
                 <div class="col-lg-4">
                     <div class="headding2-w text-center">
-                        <span class="span">Integrations</span>
-                        <h2 class="text-anime-style-3">Connect With Your Favorite Apps</h2>
+                        <span class="span">Trust & Security</span>
+                        <h2 class="text-anime-style-3">Trusted Payment & Activation</h2>
                         <div class="space16"></div>
-                        <p data-aos="fade-up" data-aos-duration="800">With our intuitive platform, creating impactful
-                            campaigns a breeze. Effortlessly email market</p>
+                        <p data-aos="fade-up" data-aos-duration="800">Instant QR • Visa/Mastercard • WhatsApp Support • 24-hour Activation Guarantee</p>
 
                         <div class="space30"></div>
                         <div class="" data-aos="fade-up" data-aos-duration="1000">
-                            <a href="{{ url('features') }}" class="others">View All Integrations</a>
+                            <a href="{{ url('checkout') }}" class="others">Activate eSIM Now</a>
                         </div>
                     </div>
                 </div>
@@ -383,8 +369,8 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="headding2">
-                    <span class="span">Testimonials</span>
-                    <h2 class="text-anime-style-3">Why Our Users Love Us</h2>
+                    <span class="span">Student Reviews</span>
+                    <h2 class="text-anime-style-3">Loved by students getting set up fast</h2>
                 </div>
             </div>
 
@@ -414,15 +400,15 @@
                         <div class="icon">
                             <img src="{{ asset('esoft/img/icons/tes2-icon.png') }}" alt="" />
                         </div>
-                        <p>"I can't imagine managing our email campaigns without eSoft. The simplicity of creating visually stunning emails combined with powerful automation tools has been a game-changer for our marketing team. Our engagement rates have soared.”</p>
+                        <p>"Perfect for my semester in Istanbul! Setup in minutes and WhatsApp support in Arabic was incredibly helpful when I had questions."</p>
                         <div class="single-slider-bottom">
                             <div class="headdding-area">
                                 <div class="image">
                                     <img src="{{ asset('esoft/img/testimonial/tes2-img1.png') }}" alt="" />
                                 </div>
                                 <div class="headding">
-                                    <h5><a href="#">Pat Cummins</a></h5>
-                                    <p>CEO Biosynthesis</p>
+                                    <h5><a href="#">Ahmed K.</a></h5>
+                                    <p>Student in Ankara</p>
                                 </div>
                             </div>
                             <div class="logo">
@@ -443,15 +429,15 @@
                         <div class="icon">
                             <img src="{{ asset('esoft/img/icons/tes2-icon.png') }}" alt="" />
                         </div>
-                        <p>"eSoft has exceeded our expectations in every way. The ease with which we can target specific audience segments has transformed our approach to email marketing. The automation features have saved us countless hours, allowing us to focus.”</p>
+                        <p>"Cheaper than roaming and works everywhere in Turkey. The QR code arrived instantly and activation was super smooth for my exchange program."</p>
                         <div class="single-slider-bottom">
                             <div class="headdding-area">
                                 <div class="image">
                                     <img src="{{ asset('esoft/img/testimonial/tes2-img2.png') }}" alt="" />
                                 </div>
                                 <div class="headding">
-                                    <h5><a href="#">Jane Doe</a></h5>
-                                    <p>Founder TechCorp</p>
+                                    <h5><a href="#">Sarah M.</a></h5>
+                                    <p>Exchange Student Istanbul</p>
                                 </div>
                             </div>
                             <div class="logo">
@@ -475,8 +461,8 @@
         <div class="row">
             <div class="col-lg-6 m-auto text-center">
                 <div class="headding2">
-                    <span class="span">Our Blog</span>
-                    <h2 class="text-anime-style-3">Our Latest Blog & News</h2>
+                    <span class="span">FAQ</span>
+                    <h2 class="text-anime-style-3">Frequently Asked Questions</h2>
                 </div>
             </div>
         </div>
@@ -491,12 +477,12 @@
                     </div>
                     <div class="headding">
                         <div class="tags">
-                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon1.png') }}" alt="" /> 10 October 2023</a>
-                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon2.png') }}" alt="" /> Rabby Mahmud</a>
+                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon1.png') }}" alt="" /> FAQ</a>
+                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon2.png') }}" alt="" /> eSIM Guide</a>
                         </div>
-                        <h4><a href="blog-details">The Ultimate Email Campaign Playbook</a></h4>
-                        <p>Effortlessly design stunning emails, automate your market workflow, & precisely target your audience for maximum impact.</p>
-                        <a href="blog-details" class="learn">Read more <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                        <h4><a href="#faq">Is my phone compatible with eSIM?</a></h4>
+                        <p>Most modern iPhone/Android models support eSIM. Message us on WhatsApp if you're unsure about compatibility.</p>
+                        <a href="https://wa.me/your-number" class="learn">Ask on WhatsApp <span><i class="fa-regular fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -508,12 +494,12 @@
                     </div>
                     <div class="headding">
                         <div class="tags">
-                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon1.png') }}" alt="" /> 10 October 2023</a>
-                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon2.png') }}" alt="" /> Rabby Mahmud</a>
+                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon1.png') }}" alt="" /> Support</a>
+                            <a href="#"><img src="{{ asset('esoft/img/icons/blog2-icon2.png') }}" alt="" /> Activation</a>
                         </div>
-                        <h4><a href="blog-details">Email Design: A Deep Dive in Visual Impact</a></h4>
-                        <p>Effortlessly design stunning emails, automate your market workflow, & precisely target your audience for maximum impact.</p>
-                        <a href="blog-details" class="learn">Read more <span><i class="fa-regular fa-arrow-right"></i></span></a>
+                        <h4><a href="#support">Need help with activation?</a></h4>
+                        <p>We'll help you get online fast with 24-hour activation guarantee and multilingual WhatsApp support.</p>
+                        <a href="https://wa.me/your-number" class="learn">Get Help Now <span><i class="fa-regular fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
