@@ -6,11 +6,14 @@
         <div class="col-12">
           <div class="header-elements">
             <div class="site-logo home1-site-logo">
-              <a href="index"><img src="{{asset('esoft/img/logo/header-logo2.png')}}" alt="" /></a>
+                <a href="{{ url('index') }}">
+                    <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
+                </a>
+
             </div>
 
-            <div class="main-menu-ex main-menu-ex1">
-              <ul>
+            {{-- <div class="main-menu-ex main-menu-ex1"> --}}
+              {{-- <ul>
                 <li>
                   <a href="/">Home <i class="fa-solid fa-angle-down"></i></a>
 
@@ -85,12 +88,12 @@
                     </li>
                   </ul>
                 </li>
-              </ul>
-            </div>
+              </ul> --}}
+            {{-- </div> --}}
 
             <div class="header2-buttons">
-              <a href="login" class="login-btn">Log In</a>
-              <a href="account" class="theme-btn2">Sign Up For Free</a>
+              {{-- <a href="login" class="login-btn">Log In</a> --}}
+              <a href="account" class="theme-btn2">Activate your eSim</a>
             </div>
           </div>
         </div>
@@ -106,7 +109,9 @@
     <div class="col-12">
       <div class="mobile-header-elements">
         <div class="mobile-logo">
-          <a href="index"><img src="{{asset('esoft/img/logo/header-logo2.png')}}" alt="" /></a>
+          <a href="{{ url('index') }}">
+            <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
+        </a>
         </div>
         <div class="mobile-nav-icon">
           <i class="fa-duotone fa-bars-staggered"></i>

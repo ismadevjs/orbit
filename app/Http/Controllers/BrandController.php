@@ -21,7 +21,7 @@ class BrandController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8192',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,ico|max:8192',
         ]);
 
         if ($validator->fails()) {
@@ -52,7 +52,7 @@ class BrandController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8192',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,ico|max:8192',
         ]);
 
         if ($validator->fails()) {

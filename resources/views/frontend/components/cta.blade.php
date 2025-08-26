@@ -4,12 +4,12 @@
     <div class="row">
       <div class="col-lg-6 m-auto text-center">
         <div class="headding2-w pbmit-heading-subheading animation-style2">
-          <h2 class="pbmit-title">Join 500,000+ SEO's Who Trust eSoft For Insights That Help Their Business Grow.</h2>
+          <h2 class="pbmit-title">{{getHeading('join')->title ?? ''}}</h2>
           <div class="space16"></div>
-          <p data-aos="fade-up" data-aos-duration="800">eSoft has exceeded our expectations in every way. The ease with & which we can target specific audience segments has an transform.</p>
+          <p data-aos="fade-up" data-aos-duration="800">{{getHeading('join')->description ?? ''}}</p>
           <div class="space30"></div>
           <div class="" data-aos="fade-up" data-aos-duration="1000">
-            <a href="account" class="theme-btn3">Get Started For Free</a>
+            <a href="{{getHeading('join')->button_url ?? ''}}" class="theme-btn3">{{getHeading('join')->button_name ?? ''}}</a>
           </div>
         </div>
       </div>
@@ -25,7 +25,7 @@
       <div class="col-lg-12">
         <div class="cta2-images">
           <div class="img1">
-            <img src="{{asset('esoft/img/others/cta2-main-img.png')}}" alt="" />
+            <img src="{{asset('storage/'.getHeading('join')->image ?? '')}}" alt="" />
           </div>
           <div class="shape1">
             <img src="{{asset('esoft/img/shapes/cta2-shape2.png')}}" alt="" />

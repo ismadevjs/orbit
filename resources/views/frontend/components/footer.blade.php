@@ -1,36 +1,6 @@
 <!-- ===== FOOTER AREA START ======= -->
 <div class="footer2 _relative">
   <div class="container">
-    <div class="rwo">
-      <div class="footer-icon-box-all">
-        <div class="footer-icon-box">
-          <div class="icon">
-            <img src="{{asset('esoft/img/icons/footer-icon1.png')}}" alt="" />
-          </div>
-          <div class="headding">
-            <p>Free training & 24-hours</p>
-          </div>
-        </div>
-
-        <div class="footer-icon-box">
-          <div class="icon">
-            <img src="{{asset('esoft/img/icons/footer-icon2.png')}}" alt="" />
-          </div>
-          <div class="headding">
-            <p>Serious about security & privacy</p>
-          </div>
-        </div>
-
-        <div class="footer-icon-box">
-          <div class="icon">
-            <img src="{{asset('esoft/img/icons/footer-icon3.png')}}" alt="" />
-          </div>
-          <div class="headding">
-            <p>Highest levels of uptime the last 12 months</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="space50"></div>
     <div class="row">
@@ -39,117 +9,13 @@
           <h3>Product</h3>
 
           <ul class="menu-list">
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Integration</a>
-            </li>
-            <li>
-              <a href="#">Features</a>
-            </li>
-            <li>
-              <a href="#">Templates</a>
-            </li>
-            <li>
-              <a href="#">Changelog</a>
-            </li>
+            <p>{{getSettingValue('footer_links') ?? ''}}</p>
+
           </ul>
         </div>
       </div>
 
-      <div class="col-lg col-md-6 col-6">
-        <div class="single-footer-items">
-          <h3>Support</h3>
 
-          <ul class="menu-list">
-            <li>
-              <a href="#">On-boarding</a>
-            </li>
-            <li>
-              <a href="#">Help center</a>
-            </li>
-            <li>
-              <a href="#">Contact us</a>
-            </li>
-            <li>
-              <a href="#">Experts</a>
-            </li>
-            <li>
-              <a href="#">Status</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg col-md-6 col-6">
-        <div class="single-footer-items">
-          <h3>Resources</h3>
-
-          <ul class="menu-list">
-            <li>
-              <a href="#">Community</a>
-            </li>
-            <li>
-              <a href="#">Affiliates</a>
-            </li>
-            <li>
-              <a href="#">Partnerships</a>
-            </li>
-            <li>
-              <a href="#">Perks & Benefits</a>
-            </li>
-            <li>
-              <a href="#">Api docs</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg col-md-6 col-6">
-        <div class="single-footer-items">
-          <h3>Company</h3>
-
-          <ul class="menu-list">
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Our blog</a>
-            </li>
-            <li>
-              <a href="#">In the press</a>
-            </li>
-            <li>
-              <a href="#">Brand</a>
-            </li>
-            <li>
-              <a href="#">Work with us</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg col-md-6 col-5">
-        <div class="single-footer-items">
-          <h3>Download</h3>
-
-          <ul class="menu-list">
-            <li>
-              <a href="#">iPhone & iPad</a>
-            </li>
-            <li>
-              <a href="#">Android</a>
-            </li>
-            <li>
-              <a href="#">MacOS</a>
-            </li>
-            <li>
-              <a href="#">Window</a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
       <div class="col-lg-3 col-md-6 col-7">
         <div class="single-footer-items">
@@ -179,15 +45,15 @@
       <div class="row align-items-center">
         <div class="col-md-5">
           <div class="logo">
-            <a href="index"><img src="{{asset('esoft/img/logo/header-logo2.png')}}" alt="" /></a>
+            <a href="{{ url('index') }}">
+            <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
+        </a>
           </div>
         </div>
         <div class="col-md-7">
           <div class="coppyright text-right">
-            <a href="#">@2024 eSoft</a>
-            <a href="#">Security</a>
-            <a href="#">Your Privacy</a>
-            <a href="#">Terms</a>
+            <p>{{getSettingValue('footer_text')}}</p>
+
           </div>
         </div>
       </div>
