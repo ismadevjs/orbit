@@ -1,5 +1,7 @@
 @extends('layouts.frontend')
 
+
+
 @section('title', 'FliSim - Activate your eSIM in 60 seconds — campus-ready')
 @php
     $carousel = getTable('carousels');
@@ -23,14 +25,16 @@
                         <div class="hero-btns row" data-aos="fade-right" data-aos-duration="1100">
 
                             @if ($buttonCount > 0)
-                                @foreach ($buttons as $btn)
-                                    <div class="{{ $buttonCount == 2 ? 'col-6' : 'col-4' }} mb-2">
-                                        <a href="{{ $btn->link ?? '#' }}" class="theme-btn2 w-100 text-center">
-                                            {{ $btn->name ?? '' }}
-                                        </a>
-                                    </div>
-                                @endforeach
-                            @endif
+    @foreach ($buttons as $btn)
+        <div class="{{ $buttonCount == 2 ? 'col-6' : 'col-4' }} mb-2">
+            <a href="{{ $btn->link ?? '#' }}"
+               class="theme-btn2 w-100 text-center {{ $loop->index == 1 ? 'theme-btn3' : '' }}">
+                {{ $btn->name ?? '' }}
+            </a>
+        </div>
+    @endforeach
+@endif
+
 
                             {{-- Load More button only if more than 2 plans --}}
                             @if ($buttonCount > 2)
@@ -93,50 +97,69 @@
             <div class="row">
                 <div class="col-lg-8 m-auto text-center">
                     <div class="headding2 mb-5">
-                        <span class="span">Popular for Students & Expats in Türkiye</span>
-                        <h2 class="text-anime-style-3">Choose Your Perfect eSIM Plan</h2>
+                        <span class="span">{{getHeading('plan')->title ?? ""}}</span>
+                        <h2 class="text-anime-style-3">{{getHeading('plan')->name ?? ""}}</h2>
                         <p class="mt-3 text-muted">
-                            Stay connected instantly with affordable and reliable eSIM plans.
-                            Pick the package that suits your needs and activate in seconds.
+                            {{getHeading('plan')->description ?? ""}}
                         </p>
                     </div>
                 </div>
             </div>
 
-            {{-- Plan Cards --}}
-            <div class="row" id="plan-container">
-                @php
-                    $services = getTables('services');
-                    $countServices = $services ? count($services) : 0;
-                @endphp
+        {{-- Plan Cards --}}
+<div class="row" id="plan-container">
+    @php
+        $services = getTables('pricing_plans');
+        $countServices = $services ? count($services) : 0;
+    @endphp
 
-                @if ($services)
-                    @foreach ($services as $key => $service)
-                        <div class="
-                plan-card-wrapper mb-4
-                {{ $countServices == 1 ? 'col-lg-12' : ($countServices == 2 ? 'col-lg-4 col-md-6' : 'col-lg-6 col-md-6') }}
-                {{ $key > 1 ? 'd-none' : '' }}
-            "
-                            data-aos="fade-up" data-aos-duration="{{ 700 + $key * 100 }}">
+    @if ($services)
+        @foreach ($services as $key => $service)
+            <div class="
+                plan-card-wrapper mb-4 col-lg-6 col-md-6
+                {{ $key > 1 ? 'd-none' : '' }}"
+                data-aos="fade-up"
+                data-aos-duration="{{ 700 + $key * 100 }}">
 
-                            <div class="plan-card text-center p-4 h-100">
-                                @if ($service->image)
-                                    <div class="plan-img mb-3">
-                                        <img src="/storage/{{ $service->image }}" alt="{{ $service->name }}"
-                                            class="img-fluid">
-                                    </div>
-                                @endif
-
-                                <h4 class="plan-title">{{ $service->name ?? '' }}</h4>
-                                <p class="plan-desc">{{ $service->body ?? '' }}</p>
-                                <a href="{{ url('checkout?plan=') }}" class="theme-btn2 mt-3 w-100">
-                                    Get This Plan
-                                </a>
-                            </div>
+                <div class="plan-card text-center p-4 h-100 shadow-sm rounded">
+ {{-- Most Wanted Badge --}}
+    @if ($key == 0)
+    <div class="most-wanted-ribbon">Most Wanted</div>
+@endif
+                    {{-- Plan Image --}}
+                    @if ($service->image)
+                        <div class="plan-img mb-3">
+                            <img src="/storage/{{ $service->image }}" alt="{{ $service->name }}"
+                                class="img-fluid" style="max-height:80px;">
                         </div>
-                    @endforeach
-                @endif
+                    @endif
+
+                    {{-- Title & Description --}}
+                    <h4 class="plan-title mb-2">{{ $service->name ?? '' }}</h4>
+                    <p class="plan-desc text-muted">{{ $service->description ?? '' }}</p>
+
+                    {{-- Features --}}
+                    @if ($service->features)
+                        <ul class="list-unstyled text-start mt-3 mb-4">
+                            @foreach (json_decode($service->features) as $ft)
+                                <li class="d-flex align-items-center mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i> {{-- Bootstrap Icon --}}
+                                    <span>{{ $ft }}</span>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+
+                    {{-- CTA Button --}}
+                    <a href="{{ url('checkout?plan=' . $service->id) }}" class="theme-btn2 mt-auto w-100">
+                        Get This Plan
+                    </a>
+                </div>
             </div>
+        @endforeach
+    @endif
+</div>
+
 
 
 
@@ -147,27 +170,38 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let plans = document.querySelectorAll(".plan-card-wrapper.d-none");
-            let loadMoreBtn = document.getElementById("loadMoreBtn");
-            let shown = 2; // initially showing 2
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    let shown = 2; // initially showing 2 cards
 
-            loadMoreBtn.addEventListener("click", function() {
-                for (let i = shown; i < shown + 3 && i < plans.length + 2; i++) {
-                    if (plans[i - 2]) {
-                        plans[i - 2].classList.remove("d-none");
-                    }
-                }
-                shown += 3;
+    loadMoreBtn.addEventListener("click", function() {
+        const allPlans = document.querySelectorAll(".plan-card-wrapper");
+        let count = 0;
 
-                // Hide button if no more to load
-                if (shown >= plans.length + 2) {
-                    loadMoreBtn.style.display = "none";
-                }
-            });
-        });
-    </script>
+        for (let i = 0; i < allPlans.length; i++) {
+            if (allPlans[i].classList.contains("d-none") && count < 3) {
+                allPlans[i].classList.remove("d-none");
+
+                // Remove old column classes
+                allPlans[i].classList.remove("col-md-6", "col-lg-6");
+
+                // Add new column classes for 3 per row
+                allPlans[i].classList.add("col-md-4", "col-lg-4");
+                count++;
+            }
+        }
+
+        // Hide button if all plans are visible
+        const hiddenPlans = document.querySelectorAll(".plan-card-wrapper.d-none");
+        if (hiddenPlans.length === 0) {
+            loadMoreBtn.style.display = "none";
+        }
+    });
+});
+</script>
+
+
 
     <style>
         /* Responsive handling */
@@ -190,6 +224,23 @@
                 max-width: 100%;
             }
         }
+.most-wanted-ribbon {
+    position: absolute;
+    top: 15px;
+    right: -40px;
+    width: 150px;
+    text-align: center;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 6px 0;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 20;
+}
+
+
     </style>
 
 
@@ -265,16 +316,15 @@
                 <div class="col-lg-5">
                     <div class="headding2-w">
                         @if (getHeading('innovation'))
-
-
-                               <h2 class="text-anime-style-3">{{getHeading('innovation')->name ?? ''}}</h2>
-                                    <div class="space16"></div>
-                                    <p data-aos="fade-right" data-aos-duration="800">{{getHeading('innovation')->description ?? ''}}</p>
-                                    <div class="space30"></div>
-                                    <div class="" data-aos="fade-right" data-aos-duration="1000">
-                                        <a href="{{getHeading('innovation')->button_url ?? ''}}" class="theme-btn3">{{getHeading('innovation')->button_name ?? ''}}</a>
-                                    </div>
-
+                            <h2 class="text-anime-style-3">{{ getHeading('innovation')->name ?? '' }}</h2>
+                            <div class="space16"></div>
+                            <p data-aos="fade-right" data-aos-duration="800">
+                                {{ getHeading('innovation')->description ?? '' }}</p>
+                            <div class="space30"></div>
+                            <div class="" data-aos="fade-right" data-aos-duration="1000">
+                                <a href="{{ getHeading('innovation')->button_url ?? '' }}"
+                                    class="theme-btn3">{{ getHeading('innovation')->button_name ?? '' }}</a>
+                            </div>
                         @endif
 
                     </div>
@@ -283,7 +333,8 @@
                 <div class="col-lg-7">
                     <div class="images" data-aos="zoom-in-up" data-aos-duration="1000">
                         <div class="image1">
-                            <img src="{{ asset('storage/'.getHeading('innovation')->image ?? '') }}" alt="" />
+                            <img src="{{ asset('storage/' . optional(getHeading('innovation'))->image) }}"
+                                alt="" />
                         </div>
                         <div class="image2">
                             <img src="{{ asset('esoft/img/shapes/others2-shape1.png') }}" alt="" />
@@ -338,13 +389,12 @@
 
                                 @if (getTable('features'))
                                     @foreach (getTables('features') as $feature)
-
-                                         <div class="col-lg-4">
-                                    <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="800">
-                                        <h3>{{$feature->name ?? ''}}</h3>
-                                        <img src="{{ asset('storage/' . $feature->image) }}" alt="" />
-                                    </div>
-                                </div>
+                                        <div class="col-lg-4">
+                                            <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="800">
+                                                <h3>{{ $feature->name ?? '' }}</h3>
+                                                <img src="{{ asset('storage/' . $feature->image) }}" alt="" />
+                                            </div>
+                                        </div>
                                     @endforeach
                                 @endif
 
@@ -414,14 +464,14 @@
         <img class="shape2" src="{{ asset('esoft/img/shapes/home2-element2.png') }}" alt="" />
     </div>
     <!-- ===== WORK AREA END ======= -->
-   <!-- ===== TES AREA START ======= -->
+    <!-- ===== TES AREA START ======= -->
     <div class="tes2">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="headding2">
-                        <span class="span">Student Reviews</span>
-                        <h2 class="text-anime-style-3">Loved by students getting set up fast</h2>
+                        <span class="span">{{ getHeading('testimonials')->title ?? '' }}</span>
+                        <h2 class="text-anime-style-3">{{ getHeading('testimonials')->name ?? '' }}</h2>
                     </div>
                 </div>
 
@@ -479,16 +529,17 @@
             <div class="row">
                 <div class="col-lg-6 m-auto text-center">
                     <div class="heading5">
-                        <p class="title aos-init aos-animate" data-aos="zoom-in-left" data-aos-duration="700"><span
-                                class="span"><img src="assets/img/icons/heading5-span.png" alt=""> FAQ</span>
+                        <p class="title aos-init aos-animate" data-aos="zoom-in-left" data-aos-duration="700">
+                            <span class="span">
+                                <img src="assets/img/icons/heading5-span.png" alt=""> FAQ
+                            </span>
                         </p>
                         <h2 class="text-anime-style-3" style="perspective: 400px;">
                             <div class="split-line" style="display: block; text-align: center; position: relative;">
                                 <div style="position:relative;display:inline-block;">
-                                    <div
-                                        style="position: relative; display: inline-block; translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                        Frequestly asked question</div>
-
+                                    <div style="position: relative; display: inline-block;">
+                                        Frequently Asked Questions
+                                    </div>
                                 </div>
                             </div>
                         </h2>
@@ -502,110 +553,110 @@
                     <div class="accordion accordion1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000"
                         id="accordionExample">
                         @if (getTables('faqs'))
-                            @foreach (getTables('faqs') as $fq)
-                                <div class="accordion-item active">
-                                    <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
-                                            aria-controls="collapseOne">
+                            @foreach (getTables('faqs') as $index => $fq)
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="heading{{ $index }}">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapse{{ $index }}"
+                                            aria-expanded="false" aria-controls="collapse{{ $index }}">
                                             {{ $fq->question ?? '' }}
                                         </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div id="collapse{{ $index }}" class="accordion-collapse collapse"
+                                        aria-labelledby="heading{{ $index }}" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
                                             {{ $fq->answer ?? '' }}
                                         </div>
                                     </div>
                                 </div>
-
+                            @endforeach
+                        @endif
                     </div>
-                    @endforeach
-                    @endif
-
                 </div>
             </div>
+
             <img src="assets/img/shapes/faq5-shape1.png" alt="" class="shape1">
             <img src="assets/img/shapes/faq5-shape2.png" alt="" class="shape2">
         </div>
     </div>
 
+
     {{-- {{ LandingPageSection}} --}}
     <!-- ===== STAPES AREA START ======= -->
-<div class="stapes sp">
-    <div class="container">
+    <div class="stapes sp">
+        <div class="container">
 
-        @if ($sections = getTables('landing_page_sections'))
-            @foreach ($sections as $key => $land)
-                <div class="row align-items-center {{ $key > 0 ? 'mt-5 pt-5' : '' }}">
+            @if ($sections = getTables('landing_page_sections'))
+                @foreach ($sections as $key => $land)
+                    <div class="row align-items-center {{ $key > 0 ? 'mt-5 pt-5' : '' }}">
 
-                    {{-- Even index → text left, image right --}}
-                    @if ($key % 2 == 0)
-                        <div class="col-lg-5">
-                            <div class="headding2">
-                                <span class="span">{{ $land->title }}</span>
-                                <h5 class="text-anime-style-3">{{ $land->name }}</h5>
-                                <div class="space16"></div>
-                                <p data-aos="fade-right" data-aos-duration="800">{{ $land->content }}</p>
-                                <div class="space24"></div>
-                                <div data-aos="fade-right" data-aos-duration="1000">
-                                    <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-7">
-                            <div class="stapes-images1" data-aos="flip-right" data-aos-duration="900">
-                                @if ($land->image)
-                                    <div class="image1">
-                                        <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
+                        {{-- Even index → text left, image right --}}
+                        @if ($key % 2 == 0)
+                            <div class="col-lg-5">
+                                <div class="headding2">
+                                    <span class="span">{{ $land->title }}</span>
+                                    <h5 class="text-anime-style-3">{{ $land->name }}</h5>
+                                    <div class="space16"></div>
+                                    <p data-aos="fade-right" data-aos-duration="800">{{ $land->content }}</p>
+                                    <div class="space24"></div>
+                                    <div data-aos="fade-right" data-aos-duration="1000">
+                                        <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
                                     </div>
-                                @endif
-                                <div class="image2">
-                                    <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
                                 </div>
                             </div>
-                        </div>
 
-                    {{-- Odd index → image left, text right --}}
-                    @else
-                        <div class="col-lg-7">
-                            <div class="stapes-images2">
-                                @if ($land->image)
-                                    <div class="image1" data-aos="flip-left" data-aos-duration="900">
-                                        <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
+                            <div class="col-lg-7">
+                                <div class="stapes-images1" data-aos="flip-right" data-aos-duration="900">
+                                    @if ($land->image)
+                                        <div class="image1">
+                                            <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
+                                        </div>
+                                    @endif
+                                    <div class="image2">
+                                        <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
                                     </div>
-                                @endif
-                                <div class="image2">
-                                    <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
-                                </div>
-                                <div class="main-shape">
-                                    <img src="{{ asset('esoft/img/shapes/staps-shape.png') }}" alt="shape">
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-lg-5">
-                            <div class="headding2 pbmit-heading-subheading animation-style2">
-                                <span class="span">{{ $land->title }}</span>
-                                <h5 class="text-anime-style-3">{{ $land->name }}</h5>
-                                <div class="space16"></div>
-                                <p data-aos="fade-left" data-aos-duration="800">{{ $land->content }}</p>
-                                <div class="space24"></div>
-                                <div data-aos="fade-left" data-aos-duration="1000">
-                                    <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
+                            {{-- Odd index → image left, text right --}}
+                        @else
+                            <div class="col-lg-7">
+                                <div class="stapes-images2">
+                                    @if ($land->image)
+                                        <div class="image1" data-aos="flip-left" data-aos-duration="900">
+                                            <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
+                                        </div>
+                                    @endif
+                                    <div class="image2">
+                                        <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
+                                    </div>
+                                    <div class="main-shape">
+                                        <img src="{{ asset('esoft/img/shapes/staps-shape.png') }}" alt="shape">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endif
 
-                </div>
-            @endforeach
-        @endif
+                            <div class="col-lg-5">
+                                <div class="headding2 pbmit-heading-subheading animation-style2">
+                                    <span class="span">{{ $land->title }}</span>
+                                    <h5 class="text-anime-style-3">{{ $land->name }}</h5>
+                                    <div class="space16"></div>
+                                    <p data-aos="fade-left" data-aos-duration="800">{{ $land->content }}</p>
+                                    <div class="space24"></div>
+                                    <div data-aos="fade-left" data-aos-duration="1000">
+                                        <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
 
+                    </div>
+                @endforeach
+            @endif
+
+        </div>
     </div>
-</div>
-<!-- ===== STAPES AREA END ======= -->
+    <!-- ===== STAPES AREA END ======= -->
 
 
     <!-- ===== APPS AREA SREA ======= -->
@@ -655,4 +706,4 @@
 
 
 
-    @endsection
+@endsection

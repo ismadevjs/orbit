@@ -40,10 +40,15 @@
                     <textarea class="form-control" id="features" name="features" placeholder="أدخل المميزات، واحدة في كل سطر" rows="4"></textarea>
                 </div>
 
-                <div class="mb-3">
-                    <label for="msg_investor" class="form-label">الرسالة التي ستكون موجودة في الباقات عند المستثمر</label>
-                    <textarea class="form-control" id="msg_investor" name="msg_investor" rows="4"></textarea>
-                </div>
+<div class="mb-3">
+    <label for="button_name" class="form-label">اسم الزر</label>
+    <input type="text" class="form-control" id="button_name" name="button_name">
+</div>
+<div class="mb-3">
+    <label for="button_link" class="form-label">رابط الزر</label>
+    <input type="url" class="form-control" id="button_link" name="button_link">
+</div>
+
             </div>
         </x-models>
 
@@ -72,8 +77,8 @@
     @endsection
 
     @push('scripts')
-        
-        
+
+
         <script>
             $(document).ready(function () {
 
@@ -126,8 +131,12 @@
                     $('#name').val('');
                     $('#description').val('');
                     $('#msg_investor').val('');
+                    $('#features').val('');
+                    $('#button_name').val(''); // new
+                    $('#button_link').val(''); // new
                     $('.modal-title').text('Add New Plan');
                 });
+
 
                 // Handle form submission for add/edit
                 $('form').on('submit', function (e) {
@@ -146,6 +155,8 @@
                             percentage: $('#percentage').val(),
                             msg_investor: $('#msg_investor').val(),
                             features: $('#features').val().split('\n'),
+                            button_name: $('#button_name').val(),   // new
+                            button_link: $('#button_link').val(),   // new
                             _token: "{{ csrf_token() }}"
                         },
                         success: function (response) {
@@ -175,22 +186,25 @@
 
 
                 // Fetch and populate data for edit
-                $('#plansTable tbody').on('click', '.edit-btn', function () {
-                    const planId = $(this).data('id');
-                    fetch(`{{ route('plans.show', ':id') }}`.replace(':id', planId))
-                        .then(response => response.json())
-                        .then(data => {
-                            $('#planId').val(data.id);
-                            $('#name').val(data.name);
-                            $('#description').val(data.description);
-                            $('#min_amount').val(data.min_amount);
-                            $('#percentage').val(data.percentage);
-                            $('#msg_investor').val(data.msg_investor);
-                            $('#features').val(data.features.join('\n'));
-                            $('.modal-title').text('Edit Plan');
-                            $('#modal-planModal').modal('show');
-                        });
-                });
+               $('#plansTable tbody').on('click', '.edit-btn', function () {
+    const planId = $(this).data('id');
+    fetch(`{{ route('plans.show', ':id') }}`.replace(':id', planId))
+        .then(response => response.json())
+        .then(data => {
+            $('#planId').val(data.id);
+            $('#name').val(data.name);
+            $('#description').val(data.description);
+            $('#min_amount').val(data.min_amount);
+            $('#percentage').val(data.percentage);
+            $('#msg_investor').val(data.msg_investor);
+            $('#features').val(data.features.join('\n'));
+            $('#button_name').val(data.button_name);  // new
+            $('#button_link').val(data.button_link);  // new
+            $('.modal-title').text('Edit Plan');
+            $('#modal-planModal').modal('show');
+        });
+});
+
 
 
                 // Delete functionality

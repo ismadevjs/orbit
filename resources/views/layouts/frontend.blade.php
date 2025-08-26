@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="{{ asset('esoft/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('esoft/css/mobile-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('esoft/css/main.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!--=====JQUERY=======-->
     <script src="{{ asset('esoft/js/jquery-3-7-1.min.js') }}"></script>

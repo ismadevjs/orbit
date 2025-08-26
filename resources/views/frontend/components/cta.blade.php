@@ -1,5 +1,5 @@
 <!-- ===== CTA AREA END ======= -->
-<div class="cta2-area" style="background-image: url({{asset('esoft/img/bg/cta2-bg.png')}}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+<div  style="padding : 80px 0px 77px 0px;background-image: url({{asset('esoft/img/bg/cta2-bg.png')}}); background-position: center; background-repeat: no-repeat; background-size: cover;">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 m-auto text-center">
@@ -18,24 +18,3 @@
 </div>
 <!-- ===== CTA AREA END ======= -->
 
-<!-- ===== CTA IMAGE AREA START ======= -->
-<div class="cta2-main-image">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="cta2-images">
-          <div class="img1">
-            <img src="{{asset('storage/'.getHeading('join')->image ?? '')}}" alt="" />
-          </div>
-          <div class="shape1">
-            <img src="{{asset('esoft/img/shapes/cta2-shape2.png')}}" alt="" />
-          </div>
-          <div class="shape2">
-            <img src="{{asset('esoft/img/shapes/cta2-shape1.png')}}" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ===== CTA IMAGE AREA END ======= -->

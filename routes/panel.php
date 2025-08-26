@@ -83,7 +83,7 @@ Route::prefix('panel')->middleware(['auth'])->group(function () { {
             Route::get('/', [CarouselController::class, 'index'])->name('carousels.index');
             Route::post('post', [CarouselController::class, 'store'])->name('carousels.store');
             Route::post('update', [CarouselController::class, 'update'])->name('carousels.update');
-            Route::delete('delete/{carouselId}', [CarouselController::class, 'destroy'])->name('carousels.destroy');
+            Route::post('delete/{carouselId}', [CarouselController::class, 'destroy'])->name('carousels.destroy');
         });
 
         Route::prefix('services')->group(function () {

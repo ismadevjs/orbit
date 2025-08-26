@@ -17,44 +17,48 @@ class PricingPlanController extends Controller
 
 
     // Create a new pricing plan
-    public function store(Request $request)
-    {
-        $data = $request->validate([
-            'name' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'min_amount' => 'required|numeric|min:0',
-            'percentage' => 'required|numeric|min:0|max:100',
-            'bonus' => 'nullable|numeric|min:0',
-            'features' => 'nullable|array',
-            'msg_investor' => 'nullable|string',
-        ]);
+    // Create a new pricing plan
+public function store(Request $request)
+{
+    $data = $request->validate([
+        'name' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'min_amount' => 'required|numeric|min:0',
+        'percentage' => 'required|numeric|min:0|max:100',
+        'bonus' => 'nullable|numeric|min:0',
+        'features' => 'nullable|array',
+        'msg_investor' => 'nullable|string',
+        'button_name' => 'nullable|string|max:255', // New field
+        'button_link' => 'nullable|url|max:255',   // New field
+    ]);
 
-        $plan = PricingPlan::create($data);
+    $plan = PricingPlan::create($data);
 
-        return response()->json(['message' => 'Pricing plan created successfully', 'plan' => $plan], 201);
-    }
+    return response()->json(['message' => 'Pricing plan created successfully', 'plan' => $plan], 201);
+}
 
-    // Update a pricing plan
-    public function update(Request $request, $id)
-    {
+// Update a pricing plan
+public function update(Request $request, $id)
+{
+    $plan = PricingPlan::findOrFail($id);
 
-    
-        $plan = PricingPlan::findOrFail($id);
+    $data = $request->validate([
+        'name' => 'sometimes|required|string|max:255',
+        'description' => 'nullable|string',
+        'min_amount' => 'sometimes|required|numeric|min:0',
+        'percentage' => 'sometimes|required|numeric|min:0|max:100',
+        'bonus' => 'nullable|numeric|min:0',
+        'features' => 'nullable|array',
+        'msg_investor' => 'nullable|string',
+        'button_name' => 'nullable|string|max:255', // New field
+        'button_link' => 'nullable|url|max:255',   // New field
+    ]);
 
-        $data = $request->validate([
-            'name' => 'sometimes|required|string|max:255',
-            'description' => 'nullable|string',
-            'min_amount' => 'sometimes|required|numeric|min:0',
-            'percentage' => 'sometimes|required|numeric|min:0|max:100',
-            'bonus' => 'nullable|numeric|min:0',
-            'features' => 'nullable|array',
-            'msg_investor' => 'nullable|string',
-        ]);
+    $plan->update($data);
 
-        $plan->update($data);
+    return response()->json(['message' => 'Pricing plan updated successfully', 'plan' => $plan]);
+}
 
-        return response()->json(['message' => 'Pricing plan updated successfully', 'plan' => $plan]);
-    }
 
     // Delete a pricing plan
     public function destroy($id)
