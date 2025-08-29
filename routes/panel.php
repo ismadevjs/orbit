@@ -74,17 +74,23 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Cookie;
 
 
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Str;
+
+
 Route::get('/lang/{code}', function ($code) {
     $available = Language::pluck('code')->toArray();
+    Log::info('Requested language code: ' . $code);
 
     if (in_array($code, $available)) {
         Session::put('locale', $code);
+        Log::info('Locale set in session: ' . Session::get('locale'));
     }
 
-    // Redirect back safely
     $previous = url()->previous();
-    if (str_contains($previous, '/lang/')) {
-        return redirect('/'); // fallback
+
+    if (Str::contains($previous, '/lang/')) {
+        return redirect('/');
     }
 
     return redirect()->to($previous);
@@ -92,8 +98,7 @@ Route::get('/lang/{code}', function ($code) {
 
 
 
-
-Route::prefix('panel')->middleware(['auth'])->group(function () { {
+Route::prefix('panel')->middleware(['auth', 'set_locale'])->group(function () { {
 
 
 
