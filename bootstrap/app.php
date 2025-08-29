@@ -20,10 +20,16 @@ return Application::configure(basePath: dirname(__DIR__))
             'maintenance' => \App\Http\Middleware\Maintenance::class,
             'user_active' => \App\Http\Middleware\UserActive::class,
             'user_verification' => \App\Http\Middleware\UserVerification::class,
-            'user_send_data' => \App\Http\Middleware\UserSentData::class
+            'user_send_data' => \App\Http\Middleware\UserSentData::class,
+        ]);
+           $middleware->alias([
+            'set_locale' => \App\Http\Middleware\SetLocale::class,
         ]);
 
+        // **Important:** prepend to run before everything else
+        $middleware->prepend(SetLocale::class);
     })
+
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->validateCsrfTokens(except: [
             'mobile/*',

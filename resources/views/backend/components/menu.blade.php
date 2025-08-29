@@ -347,6 +347,18 @@
 
 
 
+
+
+
+            <li class="nav-main-item ">
+                <a class="nav-main-link {{ Route::currentRouteName() === 'languages.index' ? 'active' : '' }}"
+                    href="{{ route('languages.index') }}">
+                    <i class="nav-main-link-icon fa fa-image" style="margin-left: 8px;"></i>
+                    <span class="nav-main-link-name"> اللغات </span>
+                </a>
+            </li>
+
+
         @canany(['browse contract_type', 'browse contracts'])
             <li class="nav-main-item  {{ Route::currentRouteName() === 'contractType.index' ? 'open' : '' }}">
                 <a class="nav-main-link nav-main-link-submenu  {{ Route::currentRouteName() === 'contractType.index' ? 'active' : '' }}"

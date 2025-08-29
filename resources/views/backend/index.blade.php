@@ -4,7 +4,7 @@
 
 
     <div class="container">
-        <h1>لوحة التحكم</h1>
+        <h1>لوحة التحكم - {{app()->getLocale()}}  {{__('app.hello')}}</h1>
 
         <div class="row">
 

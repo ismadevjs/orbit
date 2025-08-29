@@ -203,6 +203,15 @@
 
                 @endpush
 
+<select onchange="window.location='{{ route('lang.switch', '') }}/'+this.value;">
+    @foreach(\App\Models\Language::all() as $lang)
+        <option value="{{ $lang->code }}" {{ app()->getLocale() == $lang->code ? 'selected' : '' }}>
+            {{ $lang->name }}
+        </option>
+    @endforeach
+</select>
+
+
                 <div class="dropdown d-inline-block">
                     <a href="{{route('frontend.index')}}" class="btn btn-sm btn-alt-secondary" target="_blank" data-toggle="tooltip" data-placement="bottom" title="زيارة الموقع">
                         <i class="fa fa-fw fa-home"></i>

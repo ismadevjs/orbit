@@ -27,6 +27,7 @@ use App\Http\Controllers\FileUploadController;
 use App\Http\Controllers\HeadingController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\IncentiveController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\InvestorController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\KycController;
@@ -36,6 +37,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\NewsLetterController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\TranslationController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PaymentMethodController;
 use App\Http\Controllers\PermissionController;
@@ -67,10 +69,35 @@ use App\Http\Controllers\WalletController;
 use App\Models\PaymentMethod;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Models\Language;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Cookie;
+
+
+Route::get('/lang/{code}', function ($code) {
+    $available = Language::pluck('code')->toArray();
+
+    if (in_array($code, $available)) {
+        Session::put('locale', $code);
+    }
+
+    // Redirect back safely
+    $previous = url()->previous();
+    if (str_contains($previous, '/lang/')) {
+        return redirect('/'); // fallback
+    }
+
+    return redirect()->to($previous);
+})->name('lang.switch');
+
 
 
 
 Route::prefix('panel')->middleware(['auth'])->group(function () { {
+
+
+
+
 
         Route::post('cache-clear', [BackendController::class, 'cacheClear'])->name('cache.clear');
         Route::post('/upload-file', [FileUploadController::class, 'upload'])->name('upload.file');
@@ -800,5 +827,20 @@ Route::prefix('panel')->middleware(['auth'])->group(function () { {
             Route::post('/update/{id}', [PricingPlanController::class, 'update'])->name('plans.update');
             Route::delete('/delete/{id}', [PricingPlanController::class, 'destroy'])->name('plans.destroy');
         });
+
+            // Languages
+    Route::prefix('languages')->group(function () {
+        Route::get('/', [LanguageController::class, 'index'])->name('languages.index');
+        Route::post('/', [LanguageController::class, 'store'])->name('languages.store');
+        Route::delete('/{language}', [LanguageController::class, 'destroy'])->name('languages.destroy');
+    });
+
+    // Translations
+    Route::prefix('translations')->group(function () {
+        Route::get('/{language}', [TranslationController::class, 'index'])->name('translations.index');
+        Route::post('/{language}', [TranslationController::class, 'store'])->name('translations.store');
+        Route::post('/{language}/sync', [TranslationController::class, 'sync'])->name('translations.sync');
+    });
+
     }
 });
