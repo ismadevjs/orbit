@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return redirect()->route('backend.index');
 // });
-Route::prefix('/')->middleware('maintenance')->group(function () {
+Route::prefix('/')->middleware(['maintenance', 'set_locale'])->group(function () {
    Route::get('/', [FrontEndController::class, 'index'])->name("frontend.index");
    Route::prefix('/')->group(function () {
        Route::post('newsletter', [NewsLetterController::class, 'store'])->name("newsletter.store");

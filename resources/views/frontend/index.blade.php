@@ -15,7 +15,11 @@
             <div class="row align-items-center hero2-content">
                 <div class="col-lg-6">
                     <div class="main-headding">
-                        <span class="span">{{ $carousel->subtitle ?? '' }}</span>
+                      <span class="span">
+    {{ $carousel ? __('messages.' . $carousel->subtitle) : '' }}
+</span>
+
+
                         <h1 class="text-anime-style-3">{{ $carousel->title ?? '' }}</h1>
                         <p data-aos="fade-right" data-aos-duration="800">
                             {{ $carousel->body ?? '' }}
@@ -25,15 +29,15 @@
                         <div class="hero-btns row" data-aos="fade-right" data-aos-duration="1100">
 
                             @if ($buttonCount > 0)
-    @foreach ($buttons as $btn)
-        <div class="{{ $buttonCount == 2 ? 'col-6' : 'col-4' }} mb-2">
-            <a href="{{ $btn->link ?? '#' }}"
-               class="theme-btn2 w-100 text-center {{ $loop->index == 1 ? 'theme-btn3' : '' }}">
-                {{ $btn->name ?? '' }}
-            </a>
-        </div>
-    @endforeach
-@endif
+                                @foreach ($buttons as $btn)
+                                    <div class="{{ $buttonCount == 2 ? 'col-6' : 'col-4' }} mb-2">
+                                        <a href="{{ $btn->link ?? '#' }}"
+                                        class="theme-btn2 w-100 text-center {{ $loop->index == 1 ? 'theme-btn3' : '' }}">
+                                            {{ $btn->name ?? '' }}
+                                        </a>
+                                    </div>
+                                @endforeach
+                            @endif
 
 
                             {{-- Load More button only if more than 2 plans --}}
