@@ -4,16 +4,37 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="header-elements">
+          <div class="header-elements d-flex align-items-center justify-content-between">
+
+            <!-- Logo -->
             <div class="site-logo home1-site-logo">
-                <a href="{{ url('index') }}">
-                    <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
-                </a>
+              <a href="{{ url('index') }}">
+                <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
+              </a>
             </div>
 
-            <div class="header2-buttons">
-              <a href="account" class="theme-btn2">Activate your eSim</a>
+            <!-- Right Section: Buttons + Language Dropdown -->
+            <div class="d-flex align-items-center gap-3">
+
+              <!-- Language Dropdown -->
+              <div class="language-switcher">
+                <select class="form-select theme-select"
+                        onchange="window.location='{{ route('lang.switch', '') }}/'+this.value;">
+                  @foreach(\App\Models\Language::all() as $lang)
+                      <option value="{{ $lang->code }}" {{ app()->getLocale() == $lang->code ? 'selected' : '' }}>
+                          {{ $lang->name }}
+                      </option>
+                  @endforeach
+                </select>
+              </div>
+
+              <!-- Button -->
+              <div class="header2-buttons">
+                <a href="account" class="theme-btn2">Activate your eSim</a>
+              </div>
+
             </div>
+
           </div>
         </div>
       </div>
@@ -21,6 +42,7 @@
   </div>
 </header>
 <!-- =====HEADER END======= -->
+
 
 <!-- =====Mobile header start======= -->
 <div class="mobile-header d-block d-lg-none">
@@ -146,7 +168,7 @@
       </div>
     </div>
     <div class="contact-infos">
-      <h3>Our Location</h3>
+      <h3>Our Socials</h3>
       <div class="box">
         <div class="icon">
           <span><i class="fa-regular fa-location-dot"></i></span>

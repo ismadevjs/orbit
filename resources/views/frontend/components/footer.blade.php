@@ -4,16 +4,13 @@
 
     <div class="space50"></div>
     <div class="row">
-      <div class="col-lg col-md-6 col-6">
-        <div class="single-footer-items">
-          <h3>Product</h3>
+      <div class="col-lg col-md-6 col-12">
+  <div class="single-footer-items">
+    <h3>About Flisim</h3>
+    <p>{{ getSettingValue('footer_links') ?? '' }}</p>
+  </div>
+</div>
 
-          <ul class="menu-list">
-            <p>{{getSettingValue('footer_links') ?? ''}}</p>
-
-          </ul>
-        </div>
-      </div>
 
 
 
@@ -50,12 +47,12 @@
         </a>
           </div>
         </div>
-        <div class="col-md-7">
-          <div class="coppyright text-right">
-            <p>{{getSettingValue('footer_text')}}</p>
+        <div class="col-12 col-md-7">
+  <div class="coppyright text-md-right text-center">
+    <p>{{ getSettingValue('footer_text') }}</p>
+  </div>
+</div>
 
-          </div>
-        </div>
       </div>
     </div>
   </div>

@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="{{ asset('esoft/css/aos.css') }}">
     <link rel="stylesheet" href="{{ asset('esoft/css/mobile-menu.css') }}">
     <link rel="stylesheet" href="{{ asset('esoft/css/main.css') }}">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <!--=====JQUERY=======-->
     <script src="{{ asset('esoft/js/jquery-3-7-1.min.js') }}"></script>
@@ -58,6 +59,8 @@
     <script src="{{ asset('esoft/js/SmoothScroll.js') }}"></script>
     <script src="{{ asset('esoft/js/tilt.jquery.js') }}"></script>
     <script src="{{ asset('esoft/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    @stack('scripts')
 </body>
 </html>
