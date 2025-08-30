@@ -4,8 +4,8 @@
                 <div class="col-lg-6">
                     <div class="main-headding">
                       <span class="span">
-    {{ $carousel ? __('messages.' . $carousel->subtitle) : '' }}
-</span>
+                            {{ $carousel ? __('messages.' . $carousel->subtitle) : '' }}
+                        </span>
 
 
                         <h1 class="text-anime-style-3">{{ $carousel->title ?? '' }}</h1>
