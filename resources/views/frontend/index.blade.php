@@ -9,6 +9,7 @@
     $buttonCount = is_array($buttons) || is_object($buttons) ? count($buttons) : 0;
 @endphp
 @section('content')
+
     <!-- ===== HERO AREA START ======= -->
     <div class="hero-area2" style="margin-top: -150px">
         <div class="container">
@@ -17,13 +18,16 @@
                 <!-- Text/Buttons -->
                 <div class="col-lg-6">
                     <div class="main-headding">
-                        <span class="span mt-5">
-                            {{ $carousel ? __($carousel->subtitle) : '' }}
+                        <span class="span mt-5" style="font-size: 13px;">
+                            {{ $carousel && $carousel->subtitle ? __('messages.' . $carousel->subtitle) : '' }}
                         </span>
 
-                        <h1 class="text-anime-style-3">{{ $carousel->title ?? '' }}</h1>
+                        <h1 class="plan-title mb-2 @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur') text-right  @else text-left @endif">
+                            {{ $carousel && $carousel->title ? __('messages.' . $carousel->title) : '' }}
+                        </h1>
+
                         <p data-aos="fade-right" data-aos-duration="800">
-                            {{ $carousel->body ?? '' }}
+                            {{ $carousel && $carousel->body ? __('messages.' . $carousel->body) : '' }}
                         </p>
 
                         <div class="space30"></div>
@@ -33,8 +37,8 @@
                                 @foreach ($buttons as $btn)
                                     <div class="col-12">
                                         <a href="{{ $btn->link ?? '#' }}"
-                                            class="theme-btn2 w-100 text-center {{ $loop->index == 1 ? 'theme-btn8' : '' }}">
-                                            {{ $btn->name ?? '' }}
+                                            class="theme-btn2 w-100 text-center {{ $loop->index == 1 ? 'theme-btn13' : '' }}">
+                                            {{ $btn->name ? __('messages.' . $btn->name) : '' }}
                                         </a>
                                     </div>
                                 @endforeach
@@ -42,7 +46,7 @@
 
                             @if ($buttonCount > 2)
                                 <div class="col-12 mt-3">
-                                    <a href="#" class="theme-btn2 w-100">Load More</a>
+                                    <a href="#" class="theme-btn2 w-100">{{ __('messages.Load More') }}</a>
                                 </div>
                             @endif
                         </div>
@@ -71,6 +75,7 @@
     <!-- ===== HERO AREA END ======= -->
 
 
+
     <!-- ===== CHOOSE AREA START ======= -->
 
     <div class="footer2 _relative" style="margin-top : -70px">
@@ -86,7 +91,7 @@
                                         alt="" />
                                 </div>
                                 <div class="headding">
-                                    <p>{{ $brand->name }}</p>
+                                    <p>{{ $brand->name ? __('messages.' . $brand->name) : '' }}</p>
                                 </div>
                             </div>
                         @endforeach
@@ -134,85 +139,90 @@
         }
     </style>
     <div class="choose2 pb120 mt-4">
-        <div class="container">
-            {{-- Section Heading --}}
-
-
-            <div class="row">
-                <div class="col-lg-8 m-auto text-center">
-                    <div class="headding2 mb-5">
-                        <span class="span">{{ getHeading('plan')->title ?? '' }}</span>
-                        <h2 class="text-anime-style-3">{{ getHeading('plan')->name ?? '' }}</h2>
-                        <p class="mt-3 text-muted">
-                            {{ getHeading('plan')->description ?? '' }}
-                        </p>
-                    </div>
+    <div class="container">
+        {{-- Section Heading --}}
+        <div class="row">
+            <div class="col-lg-8 m-auto text-center">
+                <div class="headding2 mb-5">
+                    <span class="span">
+                        {{ getHeading('plan')->title ? __('messages.' . getHeading('plan')->title) : '' }}
+                    </span>
+                    <h2 class="plan-title mb-2">
+                        {{ getHeading('plan')->name ? __('messages.' . getHeading('plan')->name) : '' }}
+                    </h2>
+                    <p class="mt-3 text-muted">
+                        {{ getHeading('plan')->description ? __('messages.' . getHeading('plan')->description) : '' }}
+                    </p>
                 </div>
             </div>
+        </div>
 
-            {{-- Plan Cards --}}
-            <div class="row" id="plan-container">
-                @php
-                    $services = getTables('pricing_plans');
-                    $countServices = $services ? count($services) : 0;
-                @endphp
+        {{-- Plan Cards --}}
+        <div class="row" id="plan-container">
+            @php
+                $services = getTables('pricing_plans');
+                $countServices = $services ? count($services) : 0;
+            @endphp
 
-                @if ($services)
-                    @foreach ($services as $key => $service)
-                        <div class="
-                plan-card-wrapper mb-4 col-lg-6 col-md-6
-                {{ $key > 1 ? 'd-none' : '' }}"
-                            data-aos="fade-up" data-aos-duration="{{ 700 + $key * 100 }}">
+            @if ($services)
+                @foreach ($services as $key => $service)
+                    <div class="
+                        plan-card-wrapper mb-4 col-lg-6 col-md-6
+                        {{ $key > 1 ? 'd-none' : '' }}"
+                        data-aos="fade-up" data-aos-duration="{{ 700 + $key * 100 }}">
 
-                            <div class="plan-card text-center p-4 h-100 shadow-sm rounded">
-                                {{-- Most Wanted Badge --}}
-                                @if ($key == 0)
-                                    <div class="most-wanted-ribbon">Most Wanted</div>
-                                @endif
-                                {{-- Plan Image --}}
-                                @if ($service->image)
-                                    <div class="plan-img mb-3">
-                                        <img src="/storage/{{ $service->image }}" alt="{{ $service->name }}"
-                                            class="img-fluid" style="max-height:80px;">
-                                    </div>
-                                @endif
+                        <div class="plan-card text-center p-4 h-100 shadow-sm rounded">
+                            {{-- Most Wanted Badge --}}
+                            @if ($key == 0)
+                                <div class="most-wanted-ribbon">{{ __('messages.Most Wanted') }}</div>
+                            @endif
 
-                                {{-- Title & Description --}}
-                                <h4 class="plan-title mb-2">{{ $service->name ?? '' }}</h4>
-                                <p class="plan-desc text-muted">{{ $service->description ?? '' }}</p>
+                            {{-- Plan Image --}}
+                            @if ($service->image)
+                                <div class="plan-img mb-3">
+                                    <img src="/storage/{{ $service->image }}"
+                                         alt="{{ $service->name }}"
+                                         class="img-fluid" style="max-height:80px;">
+                                </div>
+                            @endif
 
-                                {{-- Features --}}
-                                @if ($service->features)
-                                    <ul class="list-unstyled text-start mt-3 mb-4">
-                                        @foreach (json_decode($service->features) as $ft)
-                                            <li class="d-flex align-items-center mb-2">
-                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                {{-- Bootstrap Icon --}}
-                                                <span>{{ $ft }}</span>
-                                            </li>
-                                        @endforeach
-                                    </ul>
-                                @endif
+                            {{-- Title & Description --}}
+                            <h4 class="plan-title mb-2">
+                                {{ $service->name ? __('messages.' . $service->name) : '' }}
+                            </h4>
+                            <p class="plan-desc text-muted">
+                                {{ $service->description ? __('messages.' . $service->description) : '' }}
+                            </p>
 
-                                {{-- CTA Button --}}
-                                <a href="{{ url('checkout?plan=' . $service->id) }}" class="theme-btn2 mt-auto w-100">
-                                    Get This Plan
-                                </a>
-                            </div>
+                            {{-- Features --}}
+                            @if ($service->features)
+                                <ul class="list-unstyled text-start mt-3 mb-4">
+                                    @foreach (json_decode($service->features) as $ft)
+                                        <li class="d-flex align-items-center mb-2">
+                                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                            <span>{{ $ft ? __('messages.' . $ft) : '' }}</span>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
+
+                            {{-- CTA Button --}}
+                            <a href="{{ url('checkout?plan=' . $service->id) }}" class="theme-btn2 mt-auto w-100">
+                                {{ __('messages.Get This Plan') }}
+                            </a>
                         </div>
-                    @endforeach
-                @endif
-            </div>
+                    </div>
+                @endforeach
+            @endif
+        </div>
 
-
-
-
-            {{-- Load More Button --}}
-            <div class="text-center mt-4">
-                <button id="loadMoreBtn" class="theme-btn2">Load More</button>
-            </div>
+        {{-- Load More Button --}}
+        <div class="text-center mt-4">
+            <button id="loadMoreBtn" class="theme-btn2">{{ __('messages.Load More') }}</button>
         </div>
     </div>
+</div>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -351,361 +361,386 @@
     </div>
     <!-- ===== CHOOSE AREA END ======= -->
 
-    <!-- ===== EMAIL INNOVATION START ======= -->
-    <div class="email-innovation"
-        style="background-image: url({{ asset('esoft/img/bg/others2-bg.png') }}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="headding2-w">
-                        @if (getHeading('innovation'))
-                            <h2 class="text-anime-style-3">{{ getHeading('innovation')->name ?? '' }}</h2>
-                            <div class="space16"></div>
-                            <p data-aos="fade-right" data-aos-duration="800">
-                                {{ getHeading('innovation')->description ?? '' }}</p>
-                            <div class="space30"></div>
-                            <div class="" data-aos="fade-right" data-aos-duration="1000">
-                                <a href="{{ getHeading('innovation')->button_url ?? '' }}"
-                                    class="theme-btn3">{{ getHeading('innovation')->button_name ?? '' }}</a>
-                            </div>
-                        @endif
-
-                    </div>
+  <!-- ===== EMAIL INNOVATION START ======= -->
+<div class="email-innovation"
+    style="background-image: url({{ asset('esoft/img/bg/others2-bg.png') }}); background-position: center center; background-repeat: no-repeat; background-size: cover;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="headding2-w">
+                    @if (getHeading('innovation'))
+                        <h2 class="plan-title mb-2">
+                            {{ getHeading('innovation')->name ? __('messages.' . getHeading('innovation')->name) : '' }}
+                        </h2>
+                        <div class="space16"></div>
+                        <p data-aos="fade-right" data-aos-duration="800">
+                            {{ getHeading('innovation')->description ? __('messages.' . getHeading('innovation')->description) : '' }}
+                        </p>
+                        <div class="space30"></div>
+                        <div class="" data-aos="fade-right" data-aos-duration="1000">
+                            <a href="{{ getHeading('innovation')->button_url ?? '' }}" class="theme-btn8">
+                                {{ getHeading('innovation')->button_name ? __('messages.' . getHeading('innovation')->button_name) : '' }}
+                            </a>
+                        </div>
+                    @endif
                 </div>
+            </div>
 
-                <div class="col-lg-7">
-                    <div class="images" data-aos="zoom-in-up" data-aos-duration="1000">
-                        <div class="image1">
-                            <img src="{{ asset('storage/' . optional(getHeading('innovation'))->image) }}"
-                                alt="" />
-                        </div>
-                        <div class="image2">
-                            <img src="{{ asset('esoft/img/shapes/others2-shape1.png') }}" alt="" />
-                        </div>
-                        <div class="image3">
-                            {{-- <img src="{{ asset('esoft/img/shapes/others2-shape2.png') }}" alt="" /> --}}
-                        </div>
+            <div class="col-lg-7">
+                <div class="images" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <div class="image1">
+                        <img src="{{ asset('storage/' . optional(getHeading('innovation'))->image) }}" alt="" />
+                    </div>
+                    <div class="image2">
+                        <img src="{{ asset('esoft/img/shapes/others2-shape1.png') }}" alt="" />
+                    </div>
+                    <div class="image3">
+                        {{-- <img src="{{ asset('esoft/img/shapes/others2-shape2.png') }}" alt="" /> --}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ===== EMAIL INNOVATION END ======= -->
+</div>
+<!-- ===== EMAIL INNOVATION END ======= -->
 
-    <!-- ===== WORK AREA START ======= -->
-    <div class="work2 sp _relative">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 m-auto text-center">
-                    <div class="headding2">
-                        <span class="span">How It Works</span>
-                        <h2 class="text-anime-style-3">3 Simple Steps to Get Connected</h2>
-                    </div>
+
+   <!-- ===== WORK AREA START ======= -->
+<div class="work2 sp _relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto text-center">
+                <div class="headding2">
+                    <span class="span">{{ __('messages.How It Works') }}</span>
+                    <h2 class="plan-title mb-2">{{ __('messages.3 Simple Steps to Get Connected') }}</h2>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-lg-9 m-auto text-center">
-                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="tab1-tab" type="button" role="tab"
-                                aria-controls="tab1" aria-selected="true">1</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tab2-tab" type="button" role="tab" aria-controls="tab2"
-                                aria-selected="false">2</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="tab3-tab" type="button" role="tab" aria-controls="tab3"
-                                aria-selected="false">3</button>
-                        </li>
-                    </ul>
-                </div>
+        <div class="row">
+            <div class="col-lg-9 m-auto text-center">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab1-tab" type="button" role="tab"
+                            aria-controls="tab1" aria-selected="true">1</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab2-tab" type="button" role="tab" aria-controls="tab2"
+                            aria-selected="false">2</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab3-tab" type="button" role="tab" aria-controls="tab3"
+                            aria-selected="false">3</button>
+                    </li>
+                </ul>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="tab1" role="tabpanel"
-                            aria-labelledby="tab1-tab">
-                            {{-- Desktop view (3 columns) --}}
-                            <div class="row d-none d-md-flex">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tab-content" id="pills-tabContent">
+                    {{-- TAB 1 --}}
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel"
+                        aria-labelledby="tab1-tab">
+
+                        {{-- Desktop view (3 columns) --}}
+                        <div class="row d-none d-md-flex">
+                            @if (getTable('features'))
+                                @foreach (getTables('features') as $feature)
+                                    <div class="col-lg-4">
+                                        <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="800">
+                                            <h3>{{ $feature->name ? __('messages.' . $feature->name) : '' }}</h3>
+                                            <img src="{{ asset('storage/' . $feature->image) }}" alt="" />
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endif
+                        </div>
+
+                        {{-- Mobile view (Swiper) --}}
+                        <div class="swiper d-block d-md-none">
+                            <div class="swiper-wrapper">
                                 @if (getTable('features'))
                                     @foreach (getTables('features') as $feature)
-                                        <div class="col-lg-4">
-                                            <div class="tabs-box-item" data-aos="fade-up" data-aos-duration="800">
-                                                <h3>{{ $feature->name ?? '' }}</h3>
+                                        <div class="swiper-slide">
+                                            <div class="tabs-box-item">
+                                                <h3>{{ $feature->name ? __('messages.' . $feature->name) : '' }}</h3>
                                                 <img src="{{ asset('storage/' . $feature->image) }}" alt="" />
                                             </div>
                                         </div>
                                     @endforeach
                                 @endif
                             </div>
-
-                            {{-- Mobile view (Swiper) --}}
-                            <div class="swiper d-block d-md-none">
-                                <div class="swiper-wrapper">
-                                    @if (getTable('features'))
-                                        @foreach (getTables('features') as $feature)
-                                            <div class="swiper-slide">
-                                                <div class="tabs-box-item">
-                                                    <h3>{{ $feature->name ?? '' }}</h3>
-                                                    <img src="{{ asset('storage/' . $feature->image) }}"
-                                                        alt="" />
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    @endif
-                                </div>
-
-                                <!-- Swiper navigation (optional) -->
-                                {{-- <div class="swiper-pagination"></div> --}}
-                            </div>
-
-
-
-
                         </div>
-                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="tabs-box-item">
-                                        <h3>Scan the QR Code</h3>
-                                        <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="tabs-box-item">
-                                        <h3>Turn Data Roaming ON</h3>
-                                        <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="tabs-box-item">
-                                        <h3>Connect to Turkish Networks</h3>
-                                        <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
-                                    </div>
+                    </div>
+
+                    {{-- TAB 2 --}}
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="tabs-box-item">
+                                    <h3>{{ __('messages.Scan the QR Code') }}</h3>
+                                    <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    <div class="tabs-box-item">
-                                        <h3>You're Online!</h3>
-                                        <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
-                                    </div>
+                            <div class="col-lg-4">
+                                <div class="tabs-box-item">
+                                    <h3>{{ __('messages.Turn Data Roaming ON') }}</h3>
+                                    <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
                                 </div>
-                                <div class="col-lg-4">
-                                    <div class="tabs-box-item">
-                                        <h3>WhatsApp Support Available</h3>
-                                        <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="tabs-box-item">
-                                        <h3>Download Orbit App</h3>
-                                        <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
-                                    </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="tabs-box-item">
+                                    <h3>{{ __('messages.Connect to Turkish Networks') }}</h3>
+                                    <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {{-- TAB 3 --}}
+                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="tabs-box-item">
+                                    <h3>{{ __('messages.You\'re Online!') }}</h3>
+                                    <img src="{{ asset('esoft/img/work/work2-img1.png') }}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="tabs-box-item">
+                                    <h3>{{ __('messages.WhatsApp Support Available') }}</h3>
+                                    <img src="{{ asset('esoft/img/work/work2-img2.png') }}" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="tabs-box-item">
+                                    <h3>{{ __('messages.Download Orbit App') }}</h3>
+                                    <img src="{{ asset('esoft/img/work/work2-img3.png') }}" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-        <img class="shape1" src="{{ asset('esoft/img/shapes/home2-element1.png') }}" alt="" />
-        <img class="shape2" src="{{ asset('esoft/img/shapes/home2-element2.png') }}" alt="" />
     </div>
-    <!-- ===== WORK AREA END ======= -->
-    <!-- ===== TES AREA START ======= -->
-    <div class="tes2">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="headding2">
-                        <span class="span">{{ getHeading('testimonials')->title ?? '' }}</span>
-                        <h2 class="text-anime-style-3">{{ getHeading('testimonials')->name ?? '' }}</h2>
-                    </div>
+
+    <img class="shape1" src="{{ asset('esoft/img/shapes/home2-element1.png') }}" alt="" />
+    <img class="shape2" src="{{ asset('esoft/img/shapes/home2-element2.png') }}" alt="" />
+</div>
+<!-- ===== WORK AREA END ======= -->
+
+  <!-- ===== TES AREA START ======= -->
+<div class="tes2">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="headding2">
+                    <span class="span">
+                        {{ getHeading('testimonials')->title ? __('messages.' . getHeading('testimonials')->title) : '' }}
+                    </span>
+                    <h2 class="plan-title mb-2">
+                        {{ getHeading('testimonials')->name ? __('messages.' . getHeading('testimonials')->name) : '' }}
+                    </h2>
                 </div>
-
-
             </div>
+        </div>
 
-            <div class="space60"></div>
+        <div class="space60"></div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tes2-slider-all" data-aos="fade-up" data-aos-duration="900">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="tes2-slider-all" data-aos="fade-up" data-aos-duration="900">
 
-                        {{-- Testimonial 1 --}}
-                        @if (getTables('services'))
-                            @foreach (getTables('reviews') as $rev)
-                                <div class="single-slider">
-                                    <ul class="stars">
-                                        @for ($i = 0; $i <= $rev->rating; $i++)
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        @endfor
-                                    </ul>
+                    {{-- Testimonials --}}
+                    @if (getTables('reviews'))
+                        @foreach (getTables('reviews') as $rev)
+                            <div class="single-slider">
+                                <ul class="stars">
+                                    @for ($i = 0; $i < $rev->rating; $i++)
+                                        <li><i class="fa-solid fa-star"></i></li>
+                                    @endfor
+                                </ul>
 
-                                    <p>{{ $rev->comment ?? '' }}</p>
-                                    <div class="single-slider-bottom">
-                                        <div class="headdding-area">
-                                            <div class="image">
-                                                <img src="storage/{{ $rev->image ?? '' }}" alt="" />
-                                            </div>
-                                            <div class="headding">
-                                                <h5><a href="#">{{ $rev->name ?? '' }}</a></h5>
-                                                <p>{{ $rev->role ?? '' }}</p>
-                                            </div>
+                                <p>{{ $rev->comment ? __('messages.' . $rev->comment) : '' }}</p>
+
+                                <div class="single-slider-bottom">
+                                    <div class="headdding-area">
+                                        <div class="image">
+                                            <img src="storage/{{ $rev->image ?? '' }}" alt="" />
                                         </div>
-
-                                    </div>
-                                </div>
-                            @endforeach
-                        @endif
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img class="tes2-shape" src="{{ asset('esoft/img/shapes/footer2-shape2.png') }}" alt="" />
-    </div>
-    <!-- ===== TES AREA END ======= -->
-
-
-    <div class="faq5 sp" id="faq">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 m-auto text-center">
-                    <div class="heading5">
-                        <p class="title aos-init aos-animate" data-aos="zoom-in-left" data-aos-duration="700">
-                            <span class="span">
-                                <img src="assets/img/icons/heading5-span.png" alt=""> FAQ
-                            </span>
-                        </p>
-                        <h2 class="text-anime-style-3" style="perspective: 400px;">
-                            <div class="split-line" style="display: block; text-align: center; position: relative;">
-                                <div style="position:relative;display:inline-block;">
-                                    <div style="position: relative; display: inline-block;">
-                                        Frequently Asked Questions
-                                    </div>
-                                </div>
-                            </div>
-                        </h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space30"></div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="accordion accordion1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000"
-                        id="accordionExample">
-                        @if (getTables('faqs'))
-                            @foreach (getTables('faqs') as $index => $fq)
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="heading{{ $index }}">
-                                        <button class="accordion-button collapsed" type="button"
-                                            data-bs-toggle="collapse" data-bs-target="#collapse{{ $index }}"
-                                            aria-expanded="false" aria-controls="collapse{{ $index }}">
-                                            {{ $fq->question ?? '' }}
-                                        </button>
-                                    </h2>
-                                    <div id="collapse{{ $index }}" class="accordion-collapse collapse"
-                                        aria-labelledby="heading{{ $index }}" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            {{ $fq->answer ?? '' }}
+                                        <div class="headding">
+                                            <h5><a href="#">{{ $rev->name ? __('messages.' . $rev->name) : '' }}</a></h5>
+                                            <p>{{ $rev->role ? __('messages.' . $rev->role) : '' }}</p>
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
-                        @endif
-                    </div>
+                            </div>
+                        @endforeach
+                    @endif
+
                 </div>
             </div>
-
-            <img src="assets/img/shapes/faq5-shape1.png" alt="" class="shape1">
-            <img src="assets/img/shapes/faq5-shape2.png" alt="" class="shape2">
         </div>
     </div>
+    <img class="tes2-shape" src="{{ asset('esoft/img/shapes/footer2-shape2.png') }}" alt="" />
+</div>
+<!-- ===== TES AREA END ======= -->
+
+
+
+ <div class="faq5 sp" id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 m-auto text-center">
+                <div class="heading5">
+                    <p class="title aos-init aos-animate" data-aos="zoom-in-left" data-aos-duration="700">
+                        <span class="span">
+                            <img src="assets/img/icons/heading5-span.png" alt=""> {{ __('messages.FAQ') }}
+                        </span>
+                    </p>
+                    <h2 class="plan-title mb-2" style="perspective: 400px;">
+                        <div class="split-line" style="display: block; text-align: center; position: relative;">
+                            <div style="position:relative;display:inline-block;">
+                                <div style="position: relative; display: inline-block;">
+                                    {{ __('messages.Frequently Asked Questions') }}
+                                </div>
+                            </div>
+                        </div>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="accordion accordion1 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000"
+                    id="accordionExample">
+                    @if (getTables('faqs'))
+                        @foreach (getTables('faqs') as $index => $fq)
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading{{ $index }}">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapse{{ $index }}"
+                                        aria-expanded="false" aria-controls="collapse{{ $index }}">
+                                        {{ $fq->question ? __('messages.' . $fq->question) : '' }}
+                                    </button>
+                                </h2>
+                                <div id="collapse{{ $index }}" class="accordion-collapse collapse"
+                                    aria-labelledby="heading{{ $index }}" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        {{ $fq->answer ? __('messages.' . $fq->answer) : '' }}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+        </div>
+
+        <img src="assets/img/shapes/faq5-shape1.png" alt="" class="shape1">
+        <img src="assets/img/shapes/faq5-shape2.png" alt="" class="shape2">
+    </div>
+</div>
 
 
     {{-- {{ LandingPageSection}} --}}
-    <!-- ===== STAPES AREA START ======= -->
-    <div class="stapes sp">
-        <div class="container">
+   <!-- ===== STAPES AREA START ======= -->
+<div class="stapes sp">
+    <div class="container">
 
-            @if ($sections = getTables('landing_page_sections'))
-                @foreach ($sections as $key => $land)
-                    <div class="row align-items-center {{ $key > 0 ? 'mt-5 pt-5' : '' }}">
+        @if ($sections = getTables('landing_page_sections'))
+            @foreach ($sections as $key => $land)
+                <div class="row align-items-center {{ $key > 0 ? 'mt-5 pt-5' : '' }}">
 
-                        {{-- Even index → text left, image right --}}
-                        @if ($key % 2 == 0)
-                            <div class="col-lg-5">
-                                <div class="headding2">
-                                    <span class="span">{{ $land->title }}</span>
-                                    <h5 class="text-anime-style-3">{{ $land->name }}</h5>
-                                    <div class="space16"></div>
-                                    <p data-aos="fade-right" data-aos-duration="800">{{ $land->content }}</p>
-                                    <div class="space24"></div>
-                                    <div data-aos="fade-right" data-aos-duration="1000">
-                                        <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
-                                    </div>
+                    {{-- Even index → text left, image right --}}
+                    @if ($key % 2 == 0)
+                        <div class="col-lg-5">
+                            <div class="headding2">
+                                <span class="span">
+                                    {{ $land->title ? __('messages.' . $land->title) : '' }}
+                                </span>
+                                <h5 class="plan-title mb-2">
+                                    {{ $land->name ? __('messages.' . $land->name) : '' }}
+                                </h5>
+                                <div class="space16"></div>
+                                <p data-aos="fade-right" data-aos-duration="800">
+                                    {{ $land->content ? __('messages.' . $land->content) : '' }}
+                                </p>
+                                <div class="space24"></div>
+                                <div data-aos="fade-right" data-aos-duration="1000">
+                                    <a href="{{ url('checkout') }}" class="theme-btn2">
+                                        {{ __('messages.Get Started Now') }}
+                                    </a>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="col-lg-7">
-                                <div class="stapes-images1" data-aos="flip-right" data-aos-duration="900">
-                                    @if ($land->image)
-                                        <div class="image1">
-                                            <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
-                                        </div>
-                                    @endif
-                                    <div class="image2">
-                                        <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
+                        <div class="col-lg-7">
+                            <div class="stapes-images1" data-aos="flip-right" data-aos-duration="900">
+                                @if ($land->image)
+                                    <div class="image1">
+                                        <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
                                     </div>
+                                @endif
+                                <div class="image2">
+                                    <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
                                 </div>
                             </div>
+                        </div>
 
-                            {{-- Odd index → image left, text right --}}
-                        @else
-                            <div class="col-lg-7">
-                                <div class="stapes-images2">
-                                    @if ($land->image)
-                                        <div class="image1" data-aos="flip-left" data-aos-duration="900">
-                                            <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
-                                        </div>
-                                    @endif
-                                    <div class="image2">
-                                        <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
+                    {{-- Odd index → image left, text right --}}
+                    @else
+                        <div class="col-lg-7">
+                            <div class="stapes-images2">
+                                @if ($land->image)
+                                    <div class="image1" data-aos="flip-left" data-aos-duration="900">
+                                        <img src="/storage/{{ $land->image }}" alt="{{ $land->title }}">
                                     </div>
-                                    <div class="main-shape">
-                                        <img src="{{ asset('esoft/img/shapes/staps-shape.png') }}" alt="shape">
-                                    </div>
+                                @endif
+                                <div class="image2">
+                                    <img src="{{ asset('esoft/img/shapes/hero2-shape.png') }}" alt="shape">
+                                </div>
+                                <div class="main-shape">
+                                    <img src="{{ asset('esoft/img/shapes/staps-shape.png') }}" alt="shape">
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="col-lg-5">
-                                <div class="headding2 pbmit-heading-subheading animation-style2">
-                                    <span class="span">{{ $land->title }}</span>
-                                    <h5 class="text-anime-style-3">{{ $land->name }}</h5>
-                                    <div class="space16"></div>
-                                    <p data-aos="fade-left" data-aos-duration="800">{{ $land->content }}</p>
-                                    <div class="space24"></div>
-                                    <div data-aos="fade-left" data-aos-duration="1000">
-                                        <a href="{{ url('checkout') }}" class="theme-btn2">Get Started Now</a>
-                                    </div>
+                        <div class="col-lg-5">
+                            <div class="headding2 pbmit-heading-subheading animation-style2">
+                                <span class="span">
+                                    {{ $land->title ? __('messages.' . $land->title) : '' }}
+                                </span>
+                                <h5 class="plan-title mb-2">
+                                    {{ $land->name ? __('messages.' . $land->name) : '' }}
+                                </h5>
+                                <div class="space16"></div>
+                                <p data-aos="fade-left" data-aos-duration="800">
+                                    {{ $land->content ? __('messages.' . $land->content) : '' }}
+                                </p>
+                                <div class="space24"></div>
+                                <div data-aos="fade-left" data-aos-duration="1000">
+                                    <a href="{{ url('checkout') }}" class="theme-btn2">
+                                        {{ __('messages.Get Started Now') }}
+                                    </a>
                                 </div>
                             </div>
-                        @endif
+                        </div>
+                    @endif
 
-                    </div>
-                @endforeach
-            @endif
+                </div>
+            @endforeach
+        @endif
 
-        </div>
     </div>
-    <!-- ===== STAPES AREA END ======= -->
+</div>
+<!-- ===== STAPES AREA END ======= -->
+
 
 
     <!-- ===== APPS AREA SREA ======= -->
@@ -722,7 +757,7 @@
                 <div class="col-lg-4">
                     <div class="headding2-w text-center">
                         <span class="span">Trust & Security</span>
-                        <h2 class="text-anime-style-3">Trusted Payment & Activation</h2>
+                        <h2 class="plan-title mb-2">Trusted Payment & Activation</h2>
                         <div class="space16"></div>
                         <p data-aos="fade-up" data-aos-duration="800">Instant QR • Visa/Mastercard • WhatsApp Support •
                             24-hour Activation Guarantee</p>

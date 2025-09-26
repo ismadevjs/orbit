@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+
+
+
+    <html lang="{{ app()->getLocale() }}" @if(app()->getLocale() == 'ar' || app()->getLocale() == 'ur') dir="rtl" @else dir="ltr" @endif>
+
 <html lang="en" @yield('html_attribute')>
 <head>
     <meta charset="UTF-8">

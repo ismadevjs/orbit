@@ -7,4 +7,5 @@ return array (
   'hero_btn' => 'Get your eSim',
   'hero_bnt2' => 'Check Phone Compatibility',
   'Scan before you fly. Connect when you land.' => 'Scan before you fly. Connect when you land.',
+  'Your eSIM is just one click away' => 'Your eSIM is just one click away',
 );

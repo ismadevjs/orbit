@@ -17,7 +17,7 @@
         $("#ce-toggle").click(function (event) {
           $(".plan-toggle-wrap").toggleClass("active");
         });
-    
+
         $("#ce-toggle").change(function () {
           if ($(this).is(":checked")) {
             $(".tab-content #yearly").hide();
@@ -277,7 +277,7 @@
 
 
                 $('.js-tilt').tilt({
-                  
+
                 });
 
 
@@ -402,7 +402,7 @@
           jQuery("html, body").animate({ scrollTop: 0 }, duration);
           return false;
         });
-        
+
 
 
 
@@ -431,7 +431,7 @@
 			translateXValue = 0,
 			delayValue 		= 0.5,
 		   animatedTextElements = document.querySelectorAll('.text-anime-style-1');
-		
+
 		animatedTextElements.forEach((element) => {
 			let animationSplitText = new SplitText(element, { type: "chars, words" });
 				gsap.from(animationSplitText.words, {
@@ -442,16 +442,16 @@
 				stagger: staggerAmount,
 				scrollTrigger: { trigger: element, start: "top 85%" },
 				});
-		});		
+		});
 	}
-	
-	if ($('.text-anime-style-2').length) {				
+
+	if ($('.text-anime-style-2').length) {
 		let	 staggerAmount 		= 0.05,
 			 translateXValue	= 20,
 			 delayValue 		= 0.5,
 			 easeType 			= "power2.out",
 			 animatedTextElements = document.querySelectorAll('.text-anime-style-2');
-		
+
 		animatedTextElements.forEach((element) => {
 			let animationSplitText = new SplitText(element, { type: "chars, words" });
 				gsap.from(animationSplitText.chars, {
@@ -463,12 +463,12 @@
 					ease: easeType,
 					scrollTrigger: { trigger: element, start: "top 85%"},
 				});
-		});		
+		});
 	}
-	
-	if ($('.text-anime-style-3').length) {		
+
+	if ($('.text-anime-style-3').length) {
 		let	animatedTextElements = document.querySelectorAll('.text-anime-style-3');
-		
+
 		 animatedTextElements.forEach((element) => {
 			//Reset if needed
 			if (element.animation) {
@@ -497,29 +497,29 @@
 				ease: Back.easeOut,
 				stagger: 0.02,
 			});
-		});		
+		});
 	}
 
 })(jQuery);
 
 
 const rippleBtns = document.getElementsByClassName("ripple");
-  
+
 function createRipple(event) {
   // Create the ripple span element
   let ripples = document.createElement("span");
-  
+
   // Calculate the position relative to the button element
   let x = event.clientX - event.target.getBoundingClientRect().left;
   let y = event.clientY - event.target.getBoundingClientRect().top;
-  
+
   // Set the position of the ripple within the button element
   ripples.style.left = x + "px";
   ripples.style.top = y + "px";
-  
+
   // Append the ripple to the button
   event.target.appendChild(ripples);
-  
+
   // Set a timeout to remove the ripple after 1000 milliseconds
   let clearTimeoutHandle = setTimeout(() => {
     ripples.remove();

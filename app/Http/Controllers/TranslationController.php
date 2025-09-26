@@ -32,7 +32,7 @@ class TranslationController extends Controller {
         if(!File::exists($path)){
             File::makeDirectory($path,0777,true);
         }
-        File::put("$path/app.php","<?php\n\nreturn ".var_export($items,true).";\n");
+        File::put("$path/messages.php","<?php\n\nreturn ".var_export($items,true).";\n");
 
         return back()->with('success','Language file synced.');
     }

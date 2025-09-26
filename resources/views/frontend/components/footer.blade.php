@@ -5,18 +5,15 @@
     <div class="space50"></div>
     <div class="row">
       <div class="col-lg col-md-6 col-12">
-  <div class="single-footer-items">
-    <h3>About Flisim</h3>
-    <p>{{ getSettingValue('footer_links') ?? '' }}</p>
-  </div>
-</div>
-
-
-
+        <div class="single-footer-items">
+          <h3>{{ __('messages.about_flisim') }}</h3>
+          <p>{{ getSettingValue('footer_links') ? __('messages.' . getSettingValue('footer_links')) : '' }}</p>
+        </div>
+      </div>
 
       <div class="col-lg-3 col-md-6 col-7">
         <div class="single-footer-items">
-          <h3>Social Links</h3>
+          <h3>{{ __('messages.social_links') }}</h3>
 
           <ul class="social-icons">
             <li>
@@ -43,16 +40,15 @@
         <div class="col-md-5">
           <div class="logo">
             <a href="{{ url('index') }}">
-            <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
-        </a>
+              <img src="{{ asset('storage/' . getSettingValue('logo')) }}" alt="" />
+            </a>
           </div>
         </div>
         <div class="col-12 col-md-7">
-  <div class="coppyright text-md-right text-center">
-    <p>{{ getSettingValue('footer_text') }}</p>
-  </div>
-</div>
-
+          <div class="coppyright text-md-right text-center">
+            <p>{{ getSettingValue('footer_text') ? __('messages.' . getSettingValue('footer_text')) : '' }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

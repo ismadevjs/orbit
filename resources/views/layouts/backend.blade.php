@@ -203,7 +203,7 @@
 
                 @endpush
 
-<select onchange="window.location='{{ route('lang.switch', '') }}/'+this.value;">
+<select onchange="window.location='{{ route('lang.switch', '') }}/'+this.value;" class="form-select">
     @foreach(\App\Models\Language::all() as $lang)
         <option value="{{ $lang->code }}" {{ app()->getLocale() == $lang->code ? 'selected' : '' }}>
             {{ $lang->name }}
