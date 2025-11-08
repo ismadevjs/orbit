@@ -57,7 +57,7 @@
 
                     <a class="link-fx fw-bold tracking-wide mx-auto" href="{{ route('backend.index') }}">
                         <img id="logo" src="{{ asset('/storage/' . getSettingValue('logo')) }}"
-                             alt="Crystalview Reality"
+                            alt="{{getSettingValue('site_name')}}"
                              width="150"
                              height="100"
                              class="img-fluid"
